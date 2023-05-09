@@ -1,0 +1,169 @@
+﻿
+namespace quanLyKho
+{
+    partial class frmDoiMatKhau
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.lblTenDangNhap = new System.Windows.Forms.Label();
+            this.lblMatKhauCu = new System.Windows.Forms.Label();
+            this.lblMatKhauMoi = new System.Windows.Forms.Label();
+            this.lblNhapLaiMatKhauMoi = new System.Windows.Forms.Label();
+            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.txtMatKhauCu = new System.Windows.Forms.TextBox();
+            this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
+            this.txtNhapLaiMatKhauMoi = new System.Windows.Forms.TextBox();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // lblTenDangNhap
+            // 
+            this.lblTenDangNhap.AutoSize = true;
+            this.lblTenDangNhap.Location = new System.Drawing.Point(38, 18);
+            this.lblTenDangNhap.Name = "lblTenDangNhap";
+            this.lblTenDangNhap.Size = new System.Drawing.Size(105, 19);
+            this.lblTenDangNhap.TabIndex = 0;
+            this.lblTenDangNhap.Text = "Tên đăng nhập";
+            // 
+            // lblMatKhauCu
+            // 
+            this.lblMatKhauCu.AutoSize = true;
+            this.lblMatKhauCu.Location = new System.Drawing.Point(38, 67);
+            this.lblMatKhauCu.Name = "lblMatKhauCu";
+            this.lblMatKhauCu.Size = new System.Drawing.Size(91, 19);
+            this.lblMatKhauCu.TabIndex = 1;
+            this.lblMatKhauCu.Text = "Mật khẩu cũ";
+            // 
+            // lblMatKhauMoi
+            // 
+            this.lblMatKhauMoi.AutoSize = true;
+            this.lblMatKhauMoi.Location = new System.Drawing.Point(38, 116);
+            this.lblMatKhauMoi.Name = "lblMatKhauMoi";
+            this.lblMatKhauMoi.Size = new System.Drawing.Size(102, 19);
+            this.lblMatKhauMoi.TabIndex = 2;
+            this.lblMatKhauMoi.Text = "Mật khẩu mới";
+            // 
+            // lblNhapLaiMatKhauMoi
+            // 
+            this.lblNhapLaiMatKhauMoi.AutoSize = true;
+            this.lblNhapLaiMatKhauMoi.Location = new System.Drawing.Point(38, 164);
+            this.lblNhapLaiMatKhauMoi.Name = "lblNhapLaiMatKhauMoi";
+            this.lblNhapLaiMatKhauMoi.Size = new System.Drawing.Size(160, 19);
+            this.lblNhapLaiMatKhauMoi.TabIndex = 3;
+            this.lblNhapLaiMatKhauMoi.Text = "Nhập lại mật khẩu mới";
+            // 
+            // txtTenDangNhap
+            // 
+            this.txtTenDangNhap.Location = new System.Drawing.Point(245, 15);
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(262, 27);
+            this.txtTenDangNhap.TabIndex = 4;
+            this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
+            // 
+            // txtMatKhauCu
+            // 
+            this.txtMatKhauCu.Location = new System.Drawing.Point(245, 64);
+            this.txtMatKhauCu.Name = "txtMatKhauCu";
+            this.txtMatKhauCu.Size = new System.Drawing.Size(262, 27);
+            this.txtMatKhauCu.TabIndex = 5;
+            this.txtMatKhauCu.TextChanged += new System.EventHandler(this.txtMatKhauCu_TextChanged);
+            // 
+            // txtMatKhauMoi
+            // 
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(245, 113);
+            this.txtMatKhauMoi.Name = "txtMatKhauMoi";
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(262, 27);
+            this.txtMatKhauMoi.TabIndex = 6;
+            this.txtMatKhauMoi.TextChanged += new System.EventHandler(this.txtMatKhauMoi_TextChanged);
+            // 
+            // txtNhapLaiMatKhauMoi
+            // 
+            this.txtNhapLaiMatKhauMoi.Location = new System.Drawing.Point(245, 161);
+            this.txtNhapLaiMatKhauMoi.Name = "txtNhapLaiMatKhauMoi";
+            this.txtNhapLaiMatKhauMoi.Size = new System.Drawing.Size(262, 27);
+            this.txtNhapLaiMatKhauMoi.TabIndex = 7;
+            this.txtNhapLaiMatKhauMoi.TextChanged += new System.EventHandler(this.txtNhapLaiMatKhauMoi_TextChanged);
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Location = new System.Drawing.Point(405, 217);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(102, 34);
+            this.btnCapNhat.TabIndex = 8;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(245, 217);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(102, 34);
+            this.btnHuy.TabIndex = 9;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // frmDoiMatKhau
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(543, 263);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnCapNhat);
+            this.Controls.Add(this.txtNhapLaiMatKhauMoi);
+            this.Controls.Add(this.txtMatKhauMoi);
+            this.Controls.Add(this.txtMatKhauCu);
+            this.Controls.Add(this.txtTenDangNhap);
+            this.Controls.Add(this.lblNhapLaiMatKhauMoi);
+            this.Controls.Add(this.lblMatKhauMoi);
+            this.Controls.Add(this.lblMatKhauCu);
+            this.Controls.Add(this.lblTenDangNhap);
+            this.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "frmDoiMatKhau";
+            this.Text = "Đổi mật khẩu";
+            this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lblTenDangNhap;
+        private System.Windows.Forms.Label lblMatKhauCu;
+        private System.Windows.Forms.Label lblMatKhauMoi;
+        private System.Windows.Forms.Label lblNhapLaiMatKhauMoi;
+        private System.Windows.Forms.TextBox txtTenDangNhap;
+        private System.Windows.Forms.TextBox txtMatKhauCu;
+        private System.Windows.Forms.TextBox txtMatKhauMoi;
+        private System.Windows.Forms.TextBox txtNhapLaiMatKhauMoi;
+        private System.Windows.Forms.Button btnCapNhat;
+        private System.Windows.Forms.Button btnHuy;
+    }
+}
