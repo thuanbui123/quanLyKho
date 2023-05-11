@@ -13,37 +13,40 @@ namespace quanLyKho
 {
     public partial class frmMain : Form
     {
+        public string userName;
         public frmMain()
         {
             InitializeComponent();
-            dgvHangTrongKho.DataSource = getList();
         }
 
-        private void tsmiBanHang_Click(object sender, EventArgs e)
+        public frmMain(string userName)
         {
-            frmBanHang f = new frmBanHang();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            InitializeComponent();
+            lblUser.Text = userName;
         }
 
-        private DataTable getList ()
-        {
-            DataTable dt = new DataTable();
 
-            string query = "Select * from MatHang";
-            dt = DataProvider.Instance.executeQuery(query);
-
-            return dt;
-        }
 
         private void mnuDoiMatKhau_Click(object sender, EventArgs e)
         {
             formManager fm = formManager.GetInstance(this);
 
-            frmDoiMatKhau f = new frmDoiMatKhau();
+            frmDoiMatKhau f = new frmDoiMatKhau(lblUser.Text);
 
             fm.showForm(pnlContainer ,f);
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnDanhMuc_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnHeThong_Click(object sender, EventArgs e)
+        {
         }
     }
 }
