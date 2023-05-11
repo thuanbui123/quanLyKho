@@ -21,15 +21,34 @@ namespace quanLyKho
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (dangNhap(txtTenDangNhap.Text, txtMatKhau.Text))
+            bool status = true;
+            errorProvider1.Clear();
+            if (txtTenDangNhap.Text.Length == 0)
             {
-                frmMain f = new frmMain();
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
-            } else
+                errorProvider1.SetError(txtTenDangNhap, "Chưa điền tên đăng nhập!");
+                status = false;
+            }
+
+            if (txtMatKhau.Text.Length == 0)
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", "Thông báo");
+                errorProvider1.SetError(txtMatKhau, "Chưa nhập mật khẩu!");
+                status = false;
+            }
+
+
+            if (status)
+            {
+                if (dangNhap(txtTenDangNhap.Text, txtMatKhau.Text))
+                {
+                    frmMain f = new frmMain(txtTenDangNhap.Text);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", "Thông báo");
+                }
             }
         }
 

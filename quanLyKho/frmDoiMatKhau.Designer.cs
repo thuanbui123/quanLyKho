@@ -29,16 +29,19 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTenDangNhap = new System.Windows.Forms.Label();
             this.lblMatKhauCu = new System.Windows.Forms.Label();
             this.lblMatKhauMoi = new System.Windows.Forms.Label();
             this.lblNhapLaiMatKhauMoi = new System.Windows.Forms.Label();
-            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtMatKhauCu = new System.Windows.Forms.TextBox();
             this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
             this.txtNhapLaiMatKhauMoi = new System.Windows.Forms.TextBox();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTenDangNhap
@@ -77,13 +80,14 @@ namespace quanLyKho
             this.lblNhapLaiMatKhauMoi.TabIndex = 3;
             this.lblNhapLaiMatKhauMoi.Text = "Nhập lại mật khẩu mới";
             // 
-            // txtTenDangNhap
+            // txtUserName
             // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(245, 15);
-            this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(262, 27);
-            this.txtTenDangNhap.TabIndex = 4;
-            this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
+            this.txtUserName.Location = new System.Drawing.Point(245, 15);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.ReadOnly = true;
+            this.txtUserName.Size = new System.Drawing.Size(262, 27);
+            this.txtUserName.TabIndex = 4;
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
             // txtMatKhauCu
             // 
@@ -117,6 +121,7 @@ namespace quanLyKho
             this.btnCapNhat.TabIndex = 8;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnHuy
             // 
@@ -128,6 +133,10 @@ namespace quanLyKho
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -138,7 +147,7 @@ namespace quanLyKho
             this.Controls.Add(this.txtNhapLaiMatKhauMoi);
             this.Controls.Add(this.txtMatKhauMoi);
             this.Controls.Add(this.txtMatKhauCu);
-            this.Controls.Add(this.txtTenDangNhap);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblNhapLaiMatKhauMoi);
             this.Controls.Add(this.lblMatKhauMoi);
             this.Controls.Add(this.lblMatKhauCu);
@@ -148,6 +157,7 @@ namespace quanLyKho
             this.Name = "frmDoiMatKhau";
             this.Text = "Đổi mật khẩu";
             this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,11 +169,12 @@ namespace quanLyKho
         private System.Windows.Forms.Label lblMatKhauCu;
         private System.Windows.Forms.Label lblMatKhauMoi;
         private System.Windows.Forms.Label lblNhapLaiMatKhauMoi;
-        private System.Windows.Forms.TextBox txtTenDangNhap;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtMatKhauCu;
         private System.Windows.Forms.TextBox txtMatKhauMoi;
         private System.Windows.Forms.TextBox txtNhapLaiMatKhauMoi;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
