@@ -43,7 +43,6 @@ namespace quanLyKho
                     frmMain f = new frmMain(txtTenDangNhap.Text);
                     this.Hide();
                     f.ShowDialog();
-                    this.Show();
                 }
                 else
                 {
@@ -63,6 +62,12 @@ namespace quanLyKho
             DataTable table = new DataTable();
             table = DataProvider.Instance.executeQuery(query, new object[] {userName, password });
             return table.Rows.Count > 0;
+        }
+
+        public void resetControl()
+        {
+            txtTenDangNhap.Text = "";
+            txtMatKhau.Text = "";
         }
 
         private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
