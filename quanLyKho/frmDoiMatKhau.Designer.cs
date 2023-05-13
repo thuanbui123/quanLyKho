@@ -30,6 +30,7 @@ namespace quanLyKho
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoiMatKhau));
             this.lblTenDangNhap = new System.Windows.Forms.Label();
             this.lblMatKhauCu = new System.Windows.Forms.Label();
             this.lblMatKhauMoi = new System.Windows.Forms.Label();
@@ -41,13 +42,14 @@ namespace quanLyKho
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblCapNhatMatKhau = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTenDangNhap
             // 
             this.lblTenDangNhap.AutoSize = true;
-            this.lblTenDangNhap.Location = new System.Drawing.Point(38, 18);
+            this.lblTenDangNhap.Location = new System.Drawing.Point(41, 51);
             this.lblTenDangNhap.Name = "lblTenDangNhap";
             this.lblTenDangNhap.Size = new System.Drawing.Size(105, 19);
             this.lblTenDangNhap.TabIndex = 0;
@@ -56,7 +58,7 @@ namespace quanLyKho
             // lblMatKhauCu
             // 
             this.lblMatKhauCu.AutoSize = true;
-            this.lblMatKhauCu.Location = new System.Drawing.Point(38, 67);
+            this.lblMatKhauCu.Location = new System.Drawing.Point(41, 100);
             this.lblMatKhauCu.Name = "lblMatKhauCu";
             this.lblMatKhauCu.Size = new System.Drawing.Size(91, 19);
             this.lblMatKhauCu.TabIndex = 1;
@@ -65,7 +67,7 @@ namespace quanLyKho
             // lblMatKhauMoi
             // 
             this.lblMatKhauMoi.AutoSize = true;
-            this.lblMatKhauMoi.Location = new System.Drawing.Point(38, 116);
+            this.lblMatKhauMoi.Location = new System.Drawing.Point(41, 149);
             this.lblMatKhauMoi.Name = "lblMatKhauMoi";
             this.lblMatKhauMoi.Size = new System.Drawing.Size(102, 19);
             this.lblMatKhauMoi.TabIndex = 2;
@@ -74,7 +76,7 @@ namespace quanLyKho
             // lblNhapLaiMatKhauMoi
             // 
             this.lblNhapLaiMatKhauMoi.AutoSize = true;
-            this.lblNhapLaiMatKhauMoi.Location = new System.Drawing.Point(38, 164);
+            this.lblNhapLaiMatKhauMoi.Location = new System.Drawing.Point(41, 197);
             this.lblNhapLaiMatKhauMoi.Name = "lblNhapLaiMatKhauMoi";
             this.lblNhapLaiMatKhauMoi.Size = new System.Drawing.Size(160, 19);
             this.lblNhapLaiMatKhauMoi.TabIndex = 3;
@@ -82,7 +84,7 @@ namespace quanLyKho
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(245, 15);
+            this.txtUserName.Location = new System.Drawing.Point(248, 48);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.ReadOnly = true;
             this.txtUserName.Size = new System.Drawing.Size(262, 27);
@@ -91,7 +93,7 @@ namespace quanLyKho
             // 
             // txtMatKhauCu
             // 
-            this.txtMatKhauCu.Location = new System.Drawing.Point(245, 64);
+            this.txtMatKhauCu.Location = new System.Drawing.Point(248, 97);
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.Size = new System.Drawing.Size(262, 27);
             this.txtMatKhauCu.TabIndex = 5;
@@ -99,7 +101,7 @@ namespace quanLyKho
             // 
             // txtMatKhauMoi
             // 
-            this.txtMatKhauMoi.Location = new System.Drawing.Point(245, 113);
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(248, 146);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.Size = new System.Drawing.Size(262, 27);
             this.txtMatKhauMoi.TabIndex = 6;
@@ -107,7 +109,7 @@ namespace quanLyKho
             // 
             // txtNhapLaiMatKhauMoi
             // 
-            this.txtNhapLaiMatKhauMoi.Location = new System.Drawing.Point(245, 161);
+            this.txtNhapLaiMatKhauMoi.Location = new System.Drawing.Point(248, 194);
             this.txtNhapLaiMatKhauMoi.Name = "txtNhapLaiMatKhauMoi";
             this.txtNhapLaiMatKhauMoi.Size = new System.Drawing.Size(262, 27);
             this.txtNhapLaiMatKhauMoi.TabIndex = 7;
@@ -115,21 +117,25 @@ namespace quanLyKho
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(405, 217);
+            this.btnCapNhat.Image = ((System.Drawing.Image)(resources.GetObject("btnCapNhat.Image")));
+            this.btnCapNhat.Location = new System.Drawing.Point(248, 243);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(102, 34);
+            this.btnCapNhat.Size = new System.Drawing.Size(95, 40);
             this.btnCapNhat.TabIndex = 8;
-            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.Text = "Lưu";
+            this.btnCapNhat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCapNhat.UseVisualStyleBackColor = true;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(245, 217);
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(415, 243);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(102, 34);
+            this.btnHuy.Size = new System.Drawing.Size(95, 40);
             this.btnHuy.TabIndex = 9;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -137,11 +143,23 @@ namespace quanLyKho
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // lblCapNhatMatKhau
+            // 
+            this.lblCapNhatMatKhau.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapNhatMatKhau.ForeColor = System.Drawing.Color.Navy;
+            this.lblCapNhatMatKhau.Location = new System.Drawing.Point(12, 9);
+            this.lblCapNhatMatKhau.Name = "lblCapNhatMatKhau";
+            this.lblCapNhatMatKhau.Size = new System.Drawing.Size(498, 27);
+            this.lblCapNhatMatKhau.TabIndex = 10;
+            this.lblCapNhatMatKhau.Text = "CẬP NHẬT MẬT KHẨU\r\n";
+            this.lblCapNhatMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 263);
+            this.ClientSize = new System.Drawing.Size(523, 301);
+            this.Controls.Add(this.lblCapNhatMatKhau);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.txtNhapLaiMatKhauMoi);
@@ -153,6 +171,7 @@ namespace quanLyKho
             this.Controls.Add(this.lblMatKhauCu);
             this.Controls.Add(this.lblTenDangNhap);
             this.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDoiMatKhau";
             this.Text = "Đổi mật khẩu";
@@ -176,5 +195,6 @@ namespace quanLyKho
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblCapNhatMatKhau;
     }
 }

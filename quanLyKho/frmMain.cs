@@ -22,31 +22,48 @@ namespace quanLyKho
         public frmMain(string userName)
         {
             InitializeComponent();
-            lblUser.Text = userName;
+            btnThongTinTaiKhoan.Text = userName;
         }
 
-
-
-        private void mnuDoiMatKhau_Click(object sender, EventArgs e)
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
             formManager fm = formManager.GetInstance(this);
 
-            frmDoiMatKhau f = new frmDoiMatKhau(lblUser.Text);
+            frmDoiMatKhau f = new frmDoiMatKhau(btnThongTinTaiKhoan.Text);
 
-            fm.showForm(pnlContainer ,f);
+            fm.showForm(pnlContainer, f);
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
+        private void btnDangXuat_Click(object sender, EventArgs e)
         {
+            frmDangNhap f = new frmDangNhap();
+            f.resetControl();
+            this.Hide();
+            f.ShowDialog();
         }
 
-        private void btnDanhMuc_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-            
+            Application.Exit();
         }
 
-        private void btnHeThong_Click(object sender, EventArgs e)
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Application.Exit();
+        }
+
+        private void btnThongTinTaiKhoan_Click(object sender, EventArgs e)
+        {
+            formManager fm = formManager.GetInstance(this);
+            frmThongTinTaiKhoan frm = new frmThongTinTaiKhoan(btnThongTinTaiKhoan.Text);
+            fm.showForm(pnlContainer,frm);
+        }
+
+        private void btnTrangChu_Click(object sender, EventArgs e)
+        {
+            frmTrangChu frm = new frmTrangChu();
+            formManager fm = formManager.GetInstance(this);
+            fm.showForm(pnlContainer, frm);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using quanLyKho.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -145,12 +146,6 @@ namespace quanLyKho
                 status = false;
             }
 
-            if (txtUserName.Text != userName)
-            {
-                errorProvider1.SetError(txtUserName, "Tên đăng nhập không đúng");
-                status = false;
-            }
-
             if (txtMatKhauCu.Text.Length == 0)
             {
                 errorProvider1.SetError(txtMatKhauCu, "Bạn chưa nhập mật khẩu cũ!");
@@ -178,9 +173,50 @@ namespace quanLyKho
             return status;
         }
 
+        private bool doiMatKhau ()
+        {
+            bool status = true;
+            string matKhauCu = txtMatKhauCu.Text;
+            string matKhauMoi = txtMatKhauMoi.Text;
+
+            int soLuong;
+
+            string query = "Select count(*) from taiKhoan where tenDangNhap = N'"+ txtUserName.Text+"'and matKhau = N'"+matKhauCu+"'";
+
+            Object data = DataProvider.Instance.executeScalar(query);
+            soLuong = (int)data;
+
+            if (soLuong <= 0)
+            {
+                status = false;
+            }
+            else
+            {
+                string query1 = "Update taiKhoan set matKhau = N'" + matKhauMoi + "' where tenDangNhap = N'"+txtUserName.Text+"'";
+                int dong = DataProvider.Instance.executeNonQuery(query1);
+                if (dong > 0)
+                {
+                    status = true;
+                } else
+                {
+                    status = false;
+                }
+            }
+
+            return status;
+        }
+
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
+            bool status = doiMatKhau();
+            if (status)
+            {
+                MessageBox.Show("Thay đổi mật khẩu thành công", "Thông báo");
+            } else
+            {
+                MessageBox.Show("Thay đổi mật khẩu không thành công", "Thông báo");
+            }
             kiemTraDuLieu();
         }
     }
