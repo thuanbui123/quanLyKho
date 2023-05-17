@@ -31,7 +31,7 @@ namespace quanLyKho
 
         private void loadDuLieuLenLuoi()
         {
-            string query = "select ";
+            string query = "select ncc.id, ncc.tenNhaCungCap, ncc.diaChi, ncc.soDienThoai form nhaCungCap as ncc";
             DataTable data = DataProvider.Instance.executeQuery(query);
             dgv_BCTK_NCC.DataSource = data;
             dinhDangLuoi();

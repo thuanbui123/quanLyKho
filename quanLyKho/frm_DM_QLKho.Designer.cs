@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_DM_Kho_LamMoi = new System.Windows.Forms.Button();
+            this.cbo_DM_Kho_HangHoa = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_DM_Kho = new System.Windows.Forms.DataGridView();
-            this.cbo_DM_Kho_HangHoa = new System.Windows.Forms.ComboBox();
-            this.btn_DM_Kho_LamMoi = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DM_Kho)).BeginInit();
             this.SuspendLayout();
@@ -48,13 +48,33 @@
             this.panel1.Size = new System.Drawing.Size(1300, 100);
             this.panel1.TabIndex = 0;
             // 
+            // btn_DM_Kho_LamMoi
+            // 
+            this.btn_DM_Kho_LamMoi.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btn_DM_Kho_LamMoi.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DM_Kho_LamMoi.Location = new System.Drawing.Point(490, 21);
+            this.btn_DM_Kho_LamMoi.Name = "btn_DM_Kho_LamMoi";
+            this.btn_DM_Kho_LamMoi.Size = new System.Drawing.Size(172, 54);
+            this.btn_DM_Kho_LamMoi.TabIndex = 2;
+            this.btn_DM_Kho_LamMoi.Text = "Làm mới";
+            this.btn_DM_Kho_LamMoi.UseVisualStyleBackColor = false;
+            this.btn_DM_Kho_LamMoi.Click += new System.EventHandler(this.btn_DM_Kho_LamMoi_Click);
+            // 
+            // cbo_DM_Kho_HangHoa
+            // 
+            this.cbo_DM_Kho_HangHoa.FormattingEnabled = true;
+            this.cbo_DM_Kho_HangHoa.Location = new System.Drawing.Point(229, 32);
+            this.cbo_DM_Kho_HangHoa.Name = "cbo_DM_Kho_HangHoa";
+            this.cbo_DM_Kho_HangHoa.Size = new System.Drawing.Size(227, 34);
+            this.cbo_DM_Kho_HangHoa.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(63, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 26);
+            this.label1.Size = new System.Drawing.Size(139, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Loại Hàng hóa";
             // 
@@ -68,25 +88,6 @@
             this.dgv_DM_Kho.RowTemplate.Height = 24;
             this.dgv_DM_Kho.Size = new System.Drawing.Size(1300, 631);
             this.dgv_DM_Kho.TabIndex = 1;
-            // 
-            // cbo_DM_Kho_HangHoa
-            // 
-            this.cbo_DM_Kho_HangHoa.FormattingEnabled = true;
-            this.cbo_DM_Kho_HangHoa.Location = new System.Drawing.Point(229, 32);
-            this.cbo_DM_Kho_HangHoa.Name = "cbo_DM_Kho_HangHoa";
-            this.cbo_DM_Kho_HangHoa.Size = new System.Drawing.Size(227, 34);
-            this.cbo_DM_Kho_HangHoa.TabIndex = 1;
-            // 
-            // btn_DM_Kho_LamMoi
-            // 
-            this.btn_DM_Kho_LamMoi.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btn_DM_Kho_LamMoi.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DM_Kho_LamMoi.Location = new System.Drawing.Point(490, 21);
-            this.btn_DM_Kho_LamMoi.Name = "btn_DM_Kho_LamMoi";
-            this.btn_DM_Kho_LamMoi.Size = new System.Drawing.Size(172, 54);
-            this.btn_DM_Kho_LamMoi.TabIndex = 2;
-            this.btn_DM_Kho_LamMoi.Text = "Làm mới";
-            this.btn_DM_Kho_LamMoi.UseVisualStyleBackColor = false;
             // 
             // frm_DM_QLKho
             // 

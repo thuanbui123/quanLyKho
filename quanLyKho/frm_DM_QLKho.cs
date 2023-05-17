@@ -32,7 +32,7 @@ namespace quanLyKho
 
         private void loadDuLieuLenLuoi()
         {
-            string query = "select ";
+            string query = "select hh.tenHangHoa, hh.donViTinh, k.soLuong, hh.xuatXu from hangHoa as hh, kho as k where hh.id = k.idHangHoa";
             DataTable data = DataProvider.Instance.executeQuery(query);
             dgv_DM_Kho.DataSource = data;
             dinhDangLuoi();
@@ -41,6 +41,11 @@ namespace quanLyKho
         private void frm_DM_QLKho_Load(object sender, EventArgs e)
         {
             loadDuLieuLenLuoi();
+        }
+
+        private void btn_DM_Kho_LamMoi_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
