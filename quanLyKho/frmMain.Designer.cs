@@ -33,12 +33,14 @@ namespace quanLyKho
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.tcThanhDieuHuong = new System.Windows.Forms.TabControl();
             this.tpHeThong = new System.Windows.Forms.TabPage();
+            this.tpDanhMuc = new System.Windows.Forms.TabPage();
+            this.tpBaoCaoThongKe = new System.Windows.Forms.TabPage();
+            this.tpHuongDan = new System.Windows.Forms.TabPage();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.btnThongTinTaiKhoan = new System.Windows.Forms.Button();
             this.btnTrangChu = new System.Windows.Forms.Button();
-            this.tpDanhMuc = new System.Windows.Forms.TabPage();
             this.btn_DM_Kho = new System.Windows.Forms.Button();
             this.btn_DM_XuatHang = new System.Windows.Forms.Button();
             this.btn_DM_NhapHang = new System.Windows.Forms.Button();
@@ -46,7 +48,6 @@ namespace quanLyKho
             this.btn_DM_HangHoa = new System.Windows.Forms.Button();
             this.btn_DM_NhaCungCap = new System.Windows.Forms.Button();
             this.btn_DM_KhachHang = new System.Windows.Forms.Button();
-            this.tpBaoCaoThongKe = new System.Windows.Forms.TabPage();
             this.btn_BCTK_Kho = new System.Windows.Forms.Button();
             this.btn_BCTK_XuatHang = new System.Windows.Forms.Button();
             this.btn_BCTK_NhapHang = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@ namespace quanLyKho
             this.btn_BCTK_HangHoa = new System.Windows.Forms.Button();
             this.btn_BCTK_NhaCungCap = new System.Windows.Forms.Button();
             this.btn_BCTK_KhachHang = new System.Windows.Forms.Button();
-            this.tpHuongDan = new System.Windows.Forms.TabPage();
             this.btn_HD_HoTro = new System.Windows.Forms.Button();
             this.tcThanhDieuHuong.SuspendLayout();
             this.tpHeThong.SuspendLayout();
@@ -92,13 +92,55 @@ namespace quanLyKho
             this.tpHeThong.Controls.Add(this.btnDoiMatKhau);
             this.tpHeThong.Controls.Add(this.btnThongTinTaiKhoan);
             this.tpHeThong.Controls.Add(this.btnTrangChu);
-            this.tpHeThong.Location = new System.Drawing.Point(4, 32);
+            this.tpHeThong.Location = new System.Drawing.Point(4, 38);
             this.tpHeThong.Name = "tpHeThong";
             this.tpHeThong.Padding = new System.Windows.Forms.Padding(3);
-            this.tpHeThong.Size = new System.Drawing.Size(1127, 111);
+            this.tpHeThong.Size = new System.Drawing.Size(1127, 105);
             this.tpHeThong.TabIndex = 0;
             this.tpHeThong.Text = "Hệ thống";
             this.tpHeThong.UseVisualStyleBackColor = true;
+            // 
+            // tpDanhMuc
+            // 
+            this.tpDanhMuc.Controls.Add(this.btn_DM_Kho);
+            this.tpDanhMuc.Controls.Add(this.btn_DM_XuatHang);
+            this.tpDanhMuc.Controls.Add(this.btn_DM_NhapHang);
+            this.tpDanhMuc.Controls.Add(this.btn_DM_LoaiHang);
+            this.tpDanhMuc.Controls.Add(this.btn_DM_HangHoa);
+            this.tpDanhMuc.Controls.Add(this.btn_DM_NhaCungCap);
+            this.tpDanhMuc.Controls.Add(this.btn_DM_KhachHang);
+            this.tpDanhMuc.Location = new System.Drawing.Point(4, 38);
+            this.tpDanhMuc.Name = "tpDanhMuc";
+            this.tpDanhMuc.Size = new System.Drawing.Size(1127, 105);
+            this.tpDanhMuc.TabIndex = 1;
+            this.tpDanhMuc.Text = "Danh mục";
+            this.tpDanhMuc.UseVisualStyleBackColor = true;
+            // 
+            // tpBaoCaoThongKe
+            // 
+            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_Kho);
+            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_XuatHang);
+            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_NhapHang);
+            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_LoaiHang);
+            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_HangHoa);
+            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_NhaCungCap);
+            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_KhachHang);
+            this.tpBaoCaoThongKe.Location = new System.Drawing.Point(4, 38);
+            this.tpBaoCaoThongKe.Name = "tpBaoCaoThongKe";
+            this.tpBaoCaoThongKe.Size = new System.Drawing.Size(1127, 105);
+            this.tpBaoCaoThongKe.TabIndex = 2;
+            this.tpBaoCaoThongKe.Text = "Báo cáo - Thống kê";
+            this.tpBaoCaoThongKe.UseVisualStyleBackColor = true;
+            // 
+            // tpHuongDan
+            // 
+            this.tpHuongDan.Controls.Add(this.btn_HD_HoTro);
+            this.tpHuongDan.Location = new System.Drawing.Point(4, 38);
+            this.tpHuongDan.Name = "tpHuongDan";
+            this.tpHuongDan.Size = new System.Drawing.Size(1127, 105);
+            this.tpHuongDan.TabIndex = 3;
+            this.tpHuongDan.Text = "Hướng dẫn";
+            this.tpHuongDan.UseVisualStyleBackColor = true;
             // 
             // btnThoat
             // 
@@ -170,22 +212,6 @@ namespace quanLyKho
             this.btnTrangChu.UseVisualStyleBackColor = true;
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
             // 
-            // tpDanhMuc
-            // 
-            this.tpDanhMuc.Controls.Add(this.btn_DM_Kho);
-            this.tpDanhMuc.Controls.Add(this.btn_DM_XuatHang);
-            this.tpDanhMuc.Controls.Add(this.btn_DM_NhapHang);
-            this.tpDanhMuc.Controls.Add(this.btn_DM_LoaiHang);
-            this.tpDanhMuc.Controls.Add(this.btn_DM_HangHoa);
-            this.tpDanhMuc.Controls.Add(this.btn_DM_NhaCungCap);
-            this.tpDanhMuc.Controls.Add(this.btn_DM_KhachHang);
-            this.tpDanhMuc.Location = new System.Drawing.Point(4, 32);
-            this.tpDanhMuc.Name = "tpDanhMuc";
-            this.tpDanhMuc.Size = new System.Drawing.Size(1127, 111);
-            this.tpDanhMuc.TabIndex = 1;
-            this.tpDanhMuc.Text = "Danh mục";
-            this.tpDanhMuc.UseVisualStyleBackColor = true;
-            // 
             // btn_DM_Kho
             // 
             this.btn_DM_Kho.Image = ((System.Drawing.Image)(resources.GetObject("btn_DM_Kho.Image")));
@@ -197,6 +223,7 @@ namespace quanLyKho
             this.btn_DM_Kho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_DM_Kho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_DM_Kho.UseVisualStyleBackColor = true;
+            this.btn_DM_Kho.Click += new System.EventHandler(this.btn_DM_Kho_Click);
             // 
             // btn_DM_XuatHang
             // 
@@ -221,6 +248,7 @@ namespace quanLyKho
             this.btn_DM_NhapHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_DM_NhapHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_DM_NhapHang.UseVisualStyleBackColor = true;
+            this.btn_DM_NhapHang.Click += new System.EventHandler(this.btn_DM_NhapHang_Click);
             // 
             // btn_DM_LoaiHang
             // 
@@ -270,22 +298,6 @@ namespace quanLyKho
             this.btn_DM_KhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_DM_KhachHang.UseVisualStyleBackColor = true;
             // 
-            // tpBaoCaoThongKe
-            // 
-            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_Kho);
-            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_XuatHang);
-            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_NhapHang);
-            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_LoaiHang);
-            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_HangHoa);
-            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_NhaCungCap);
-            this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_KhachHang);
-            this.tpBaoCaoThongKe.Location = new System.Drawing.Point(4, 32);
-            this.tpBaoCaoThongKe.Name = "tpBaoCaoThongKe";
-            this.tpBaoCaoThongKe.Size = new System.Drawing.Size(1127, 111);
-            this.tpBaoCaoThongKe.TabIndex = 2;
-            this.tpBaoCaoThongKe.Text = "Báo cáo - Thống kê";
-            this.tpBaoCaoThongKe.UseVisualStyleBackColor = true;
-            // 
             // btn_BCTK_Kho
             // 
             this.btn_BCTK_Kho.Image = ((System.Drawing.Image)(resources.GetObject("btn_BCTK_Kho.Image")));
@@ -321,6 +333,7 @@ namespace quanLyKho
             this.btn_BCTK_NhapHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_BCTK_NhapHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_BCTK_NhapHang.UseVisualStyleBackColor = true;
+            this.btn_BCTK_NhapHang.Click += new System.EventHandler(this.btn_BCTK_NhapHang_Click);
             // 
             // btn_BCTK_LoaiHang
             // 
@@ -370,16 +383,6 @@ namespace quanLyKho
             this.btn_BCTK_KhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_BCTK_KhachHang.UseVisualStyleBackColor = true;
             // 
-            // tpHuongDan
-            // 
-            this.tpHuongDan.Controls.Add(this.btn_HD_HoTro);
-            this.tpHuongDan.Location = new System.Drawing.Point(4, 32);
-            this.tpHuongDan.Name = "tpHuongDan";
-            this.tpHuongDan.Size = new System.Drawing.Size(1127, 111);
-            this.tpHuongDan.TabIndex = 3;
-            this.tpHuongDan.Text = "Hướng dẫn";
-            this.tpHuongDan.UseVisualStyleBackColor = true;
-            // 
             // btn_HD_HoTro
             // 
             this.btn_HD_HoTro.Image = ((System.Drawing.Image)(resources.GetObject("btn_HD_HoTro.Image")));
@@ -394,7 +397,7 @@ namespace quanLyKho
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1135, 612);
             this.Controls.Add(this.tcThanhDieuHuong);

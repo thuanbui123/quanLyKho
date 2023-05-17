@@ -70,5 +70,27 @@ namespace quanLyKho
         {
             
         }
+
+        private void btn_DM_NhapHang_Click(object sender, EventArgs e)
+        {
+            
+            frm_DM_TaoHoaDonNhap f = new frm_DM_TaoHoaDonNhap();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_DM_Kho_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btn_BCTK_NhapHang_Click(object sender, EventArgs e)
+        {
+            frm_BCTK_BaoCaoNhapKho f = new frm_BCTK_BaoCaoNhapKho();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
