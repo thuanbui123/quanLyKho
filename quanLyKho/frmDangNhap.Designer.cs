@@ -35,9 +35,9 @@ namespace quanLyKho
             this.lblMatKhau = new System.Windows.Forms.Label();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.btnDangNhap = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnDangNhap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,28 +63,20 @@ namespace quanLyKho
             // 
             this.txtTenDangNhap.Location = new System.Drawing.Point(158, 24);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(256, 27);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(256, 32);
             this.txtTenDangNhap.TabIndex = 2;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(158, 79);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(256, 27);
+            this.txtMatKhau.Size = new System.Drawing.Size(256, 32);
             this.txtMatKhau.TabIndex = 3;
             this.txtMatKhau.UseSystemPasswordChar = true;
             // 
-            // btnDangNhap
+            // errorProvider1
             // 
-            this.btnDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.Image")));
-            this.btnDangNhap.Location = new System.Drawing.Point(67, 134);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(154, 54);
-            this.btnDangNhap.TabIndex = 4;
-            this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDangNhap.UseVisualStyleBackColor = true;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            this.errorProvider1.ContainerControl = this;
             // 
             // btnThoat
             // 
@@ -98,13 +90,21 @@ namespace quanLyKho
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // errorProvider1
+            // btnDangNhap
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.btnDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.Image")));
+            this.btnDangNhap.Location = new System.Drawing.Point(67, 134);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(154, 54);
+            this.btnDangNhap.TabIndex = 4;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // frmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 212);
             this.Controls.Add(this.btnThoat);
@@ -120,6 +120,7 @@ namespace quanLyKho
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDangNhap_FormClosing);
+            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -77,5 +77,10 @@ namespace quanLyKho
                 e.Cancel = true;
             }
         }
+
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

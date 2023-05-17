@@ -65,5 +65,10 @@ namespace quanLyKho
             formManager fm = formManager.GetInstance(this);
             fm.showForm(pnlContainer, frm);
         }
+
+        private void pnlContainer_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
     }
 }

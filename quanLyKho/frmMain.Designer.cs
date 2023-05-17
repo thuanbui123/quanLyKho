@@ -65,10 +65,12 @@ namespace quanLyKho
             // 
             // pnlContainer
             // 
-            this.pnlContainer.Location = new System.Drawing.Point(12, 165);
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(0, 0);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(775, 295);
+            this.pnlContainer.Size = new System.Drawing.Size(1135, 612);
             this.pnlContainer.TabIndex = 1;
+            this.pnlContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContainer_Paint);
             // 
             // tcThanhDieuHuong
             // 
@@ -76,10 +78,11 @@ namespace quanLyKho
             this.tcThanhDieuHuong.Controls.Add(this.tpDanhMuc);
             this.tcThanhDieuHuong.Controls.Add(this.tpBaoCaoThongKe);
             this.tcThanhDieuHuong.Controls.Add(this.tpHuongDan);
-            this.tcThanhDieuHuong.Location = new System.Drawing.Point(12, 12);
+            this.tcThanhDieuHuong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tcThanhDieuHuong.Location = new System.Drawing.Point(0, 0);
             this.tcThanhDieuHuong.Name = "tcThanhDieuHuong";
             this.tcThanhDieuHuong.SelectedIndex = 0;
-            this.tcThanhDieuHuong.Size = new System.Drawing.Size(775, 147);
+            this.tcThanhDieuHuong.Size = new System.Drawing.Size(1135, 147);
             this.tcThanhDieuHuong.TabIndex = 4;
             // 
             // tpHeThong
@@ -89,10 +92,10 @@ namespace quanLyKho
             this.tpHeThong.Controls.Add(this.btnDoiMatKhau);
             this.tpHeThong.Controls.Add(this.btnThongTinTaiKhoan);
             this.tpHeThong.Controls.Add(this.btnTrangChu);
-            this.tpHeThong.Location = new System.Drawing.Point(4, 28);
+            this.tpHeThong.Location = new System.Drawing.Point(4, 32);
             this.tpHeThong.Name = "tpHeThong";
             this.tpHeThong.Padding = new System.Windows.Forms.Padding(3);
-            this.tpHeThong.Size = new System.Drawing.Size(767, 115);
+            this.tpHeThong.Size = new System.Drawing.Size(1127, 111);
             this.tpHeThong.TabIndex = 0;
             this.tpHeThong.Text = "Hệ thống";
             this.tpHeThong.UseVisualStyleBackColor = true;
@@ -176,9 +179,9 @@ namespace quanLyKho
             this.tpDanhMuc.Controls.Add(this.btn_DM_HangHoa);
             this.tpDanhMuc.Controls.Add(this.btn_DM_NhaCungCap);
             this.tpDanhMuc.Controls.Add(this.btn_DM_KhachHang);
-            this.tpDanhMuc.Location = new System.Drawing.Point(4, 28);
+            this.tpDanhMuc.Location = new System.Drawing.Point(4, 32);
             this.tpDanhMuc.Name = "tpDanhMuc";
-            this.tpDanhMuc.Size = new System.Drawing.Size(767, 115);
+            this.tpDanhMuc.Size = new System.Drawing.Size(1127, 111);
             this.tpDanhMuc.TabIndex = 1;
             this.tpDanhMuc.Text = "Danh mục";
             this.tpDanhMuc.UseVisualStyleBackColor = true;
@@ -276,9 +279,9 @@ namespace quanLyKho
             this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_HangHoa);
             this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_NhaCungCap);
             this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_KhachHang);
-            this.tpBaoCaoThongKe.Location = new System.Drawing.Point(4, 28);
+            this.tpBaoCaoThongKe.Location = new System.Drawing.Point(4, 32);
             this.tpBaoCaoThongKe.Name = "tpBaoCaoThongKe";
-            this.tpBaoCaoThongKe.Size = new System.Drawing.Size(767, 115);
+            this.tpBaoCaoThongKe.Size = new System.Drawing.Size(1127, 111);
             this.tpBaoCaoThongKe.TabIndex = 2;
             this.tpBaoCaoThongKe.Text = "Báo cáo - Thống kê";
             this.tpBaoCaoThongKe.UseVisualStyleBackColor = true;
@@ -370,9 +373,9 @@ namespace quanLyKho
             // tpHuongDan
             // 
             this.tpHuongDan.Controls.Add(this.btn_HD_HoTro);
-            this.tpHuongDan.Location = new System.Drawing.Point(4, 28);
+            this.tpHuongDan.Location = new System.Drawing.Point(4, 32);
             this.tpHuongDan.Name = "tpHuongDan";
-            this.tpHuongDan.Size = new System.Drawing.Size(767, 115);
+            this.tpHuongDan.Size = new System.Drawing.Size(1127, 111);
             this.tpHuongDan.TabIndex = 3;
             this.tpHuongDan.Text = "Hướng dẫn";
             this.tpHuongDan.UseVisualStyleBackColor = true;
@@ -391,9 +394,9 @@ namespace quanLyKho
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 470);
+            this.ClientSize = new System.Drawing.Size(1135, 612);
             this.Controls.Add(this.tcThanhDieuHuong);
             this.Controls.Add(this.pnlContainer);
             this.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
