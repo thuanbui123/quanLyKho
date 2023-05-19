@@ -65,9 +65,13 @@ namespace quanLyKho
             // 
             // pnlContainer
             // 
-            this.pnlContainer.Location = new System.Drawing.Point(12, 165);
+            this.pnlContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlContainer.AutoScroll = true;
+            this.pnlContainer.Location = new System.Drawing.Point(12, 149);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(775, 295);
+            this.pnlContainer.Size = new System.Drawing.Size(775, 321);
             this.pnlContainer.TabIndex = 1;
             // 
             // tcThanhDieuHuong
@@ -76,11 +80,13 @@ namespace quanLyKho
             this.tcThanhDieuHuong.Controls.Add(this.tpDanhMuc);
             this.tcThanhDieuHuong.Controls.Add(this.tpBaoCaoThongKe);
             this.tcThanhDieuHuong.Controls.Add(this.tpHuongDan);
-            this.tcThanhDieuHuong.Location = new System.Drawing.Point(12, 12);
+            this.tcThanhDieuHuong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tcThanhDieuHuong.Location = new System.Drawing.Point(0, 0);
             this.tcThanhDieuHuong.Name = "tcThanhDieuHuong";
             this.tcThanhDieuHuong.SelectedIndex = 0;
-            this.tcThanhDieuHuong.Size = new System.Drawing.Size(775, 147);
+            this.tcThanhDieuHuong.Size = new System.Drawing.Size(800, 147);
             this.tcThanhDieuHuong.TabIndex = 4;
+            this.tcThanhDieuHuong.Click += new System.EventHandler(this.tcThanhDieuHuong_Click);
             // 
             // tpHeThong
             // 
@@ -92,7 +98,7 @@ namespace quanLyKho
             this.tpHeThong.Location = new System.Drawing.Point(4, 28);
             this.tpHeThong.Name = "tpHeThong";
             this.tpHeThong.Padding = new System.Windows.Forms.Padding(3);
-            this.tpHeThong.Size = new System.Drawing.Size(767, 115);
+            this.tpHeThong.Size = new System.Drawing.Size(792, 115);
             this.tpHeThong.TabIndex = 0;
             this.tpHeThong.Text = "Hệ thống";
             this.tpHeThong.UseVisualStyleBackColor = true;
@@ -178,7 +184,7 @@ namespace quanLyKho
             this.tpDanhMuc.Controls.Add(this.btn_DM_KhachHang);
             this.tpDanhMuc.Location = new System.Drawing.Point(4, 28);
             this.tpDanhMuc.Name = "tpDanhMuc";
-            this.tpDanhMuc.Size = new System.Drawing.Size(767, 115);
+            this.tpDanhMuc.Size = new System.Drawing.Size(792, 115);
             this.tpDanhMuc.TabIndex = 1;
             this.tpDanhMuc.Text = "Danh mục";
             this.tpDanhMuc.UseVisualStyleBackColor = true;
@@ -194,6 +200,7 @@ namespace quanLyKho
             this.btn_DM_Kho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_DM_Kho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_DM_Kho.UseVisualStyleBackColor = true;
+            this.btn_DM_Kho.Click += new System.EventHandler(this.btn_DM_Kho_Click);
             // 
             // btn_DM_XuatHang
             // 
@@ -206,6 +213,7 @@ namespace quanLyKho
             this.btn_DM_XuatHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_DM_XuatHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_DM_XuatHang.UseVisualStyleBackColor = true;
+            this.btn_DM_XuatHang.Click += new System.EventHandler(this.btn_DM_XuatHang_Click);
             // 
             // btn_DM_NhapHang
             // 
@@ -218,6 +226,7 @@ namespace quanLyKho
             this.btn_DM_NhapHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_DM_NhapHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_DM_NhapHang.UseVisualStyleBackColor = true;
+            this.btn_DM_NhapHang.Click += new System.EventHandler(this.btn_DM_NhapHang_Click);
             // 
             // btn_DM_LoaiHang
             // 
@@ -230,6 +239,7 @@ namespace quanLyKho
             this.btn_DM_LoaiHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_DM_LoaiHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_DM_LoaiHang.UseVisualStyleBackColor = true;
+            this.btn_DM_LoaiHang.Click += new System.EventHandler(this.btn_DM_LoaiHang_Click);
             // 
             // btn_DM_HangHoa
             // 
@@ -242,6 +252,7 @@ namespace quanLyKho
             this.btn_DM_HangHoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_DM_HangHoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_DM_HangHoa.UseVisualStyleBackColor = true;
+            this.btn_DM_HangHoa.Click += new System.EventHandler(this.btn_DM_HangHoa_Click);
             // 
             // btn_DM_NhaCungCap
             // 
@@ -254,6 +265,7 @@ namespace quanLyKho
             this.btn_DM_NhaCungCap.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_DM_NhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_DM_NhaCungCap.UseVisualStyleBackColor = true;
+            this.btn_DM_NhaCungCap.Click += new System.EventHandler(this.btn_DM_NhaCungCap_Click);
             // 
             // btn_DM_KhachHang
             // 
@@ -266,6 +278,7 @@ namespace quanLyKho
             this.btn_DM_KhachHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_DM_KhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_DM_KhachHang.UseVisualStyleBackColor = true;
+            this.btn_DM_KhachHang.Click += new System.EventHandler(this.btn_DM_KhachHang_Click);
             // 
             // tpBaoCaoThongKe
             // 
@@ -278,7 +291,7 @@ namespace quanLyKho
             this.tpBaoCaoThongKe.Controls.Add(this.btn_BCTK_KhachHang);
             this.tpBaoCaoThongKe.Location = new System.Drawing.Point(4, 28);
             this.tpBaoCaoThongKe.Name = "tpBaoCaoThongKe";
-            this.tpBaoCaoThongKe.Size = new System.Drawing.Size(767, 115);
+            this.tpBaoCaoThongKe.Size = new System.Drawing.Size(792, 115);
             this.tpBaoCaoThongKe.TabIndex = 2;
             this.tpBaoCaoThongKe.Text = "Báo cáo - Thống kê";
             this.tpBaoCaoThongKe.UseVisualStyleBackColor = true;
@@ -294,6 +307,7 @@ namespace quanLyKho
             this.btn_BCTK_Kho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_BCTK_Kho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_BCTK_Kho.UseVisualStyleBackColor = true;
+            this.btn_BCTK_Kho.Click += new System.EventHandler(this.btn_BCTK_Kho_Click);
             // 
             // btn_BCTK_XuatHang
             // 
@@ -306,6 +320,7 @@ namespace quanLyKho
             this.btn_BCTK_XuatHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_BCTK_XuatHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_BCTK_XuatHang.UseVisualStyleBackColor = true;
+            this.btn_BCTK_XuatHang.Click += new System.EventHandler(this.btn_BCTK_XuatHang_Click);
             // 
             // btn_BCTK_NhapHang
             // 
@@ -318,6 +333,7 @@ namespace quanLyKho
             this.btn_BCTK_NhapHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_BCTK_NhapHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_BCTK_NhapHang.UseVisualStyleBackColor = true;
+            this.btn_BCTK_NhapHang.Click += new System.EventHandler(this.btn_BCTK_NhapHang_Click);
             // 
             // btn_BCTK_LoaiHang
             // 
@@ -330,6 +346,7 @@ namespace quanLyKho
             this.btn_BCTK_LoaiHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_BCTK_LoaiHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_BCTK_LoaiHang.UseVisualStyleBackColor = true;
+            this.btn_BCTK_LoaiHang.Click += new System.EventHandler(this.btn_BCTK_LoaiHang_Click);
             // 
             // btn_BCTK_HangHoa
             // 
@@ -342,6 +359,7 @@ namespace quanLyKho
             this.btn_BCTK_HangHoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_BCTK_HangHoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_BCTK_HangHoa.UseVisualStyleBackColor = true;
+            this.btn_BCTK_HangHoa.Click += new System.EventHandler(this.btn_BCTK_HangHoa_Click);
             // 
             // btn_BCTK_NhaCungCap
             // 
@@ -354,6 +372,7 @@ namespace quanLyKho
             this.btn_BCTK_NhaCungCap.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_BCTK_NhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_BCTK_NhaCungCap.UseVisualStyleBackColor = true;
+            this.btn_BCTK_NhaCungCap.Click += new System.EventHandler(this.btn_BCTK_NhaCungCap_Click);
             // 
             // btn_BCTK_KhachHang
             // 
@@ -366,13 +385,14 @@ namespace quanLyKho
             this.btn_BCTK_KhachHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_BCTK_KhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_BCTK_KhachHang.UseVisualStyleBackColor = true;
+            this.btn_BCTK_KhachHang.Click += new System.EventHandler(this.btn_BCTK_KhachHang_Click);
             // 
             // tpHuongDan
             // 
             this.tpHuongDan.Controls.Add(this.btn_HD_HoTro);
             this.tpHuongDan.Location = new System.Drawing.Point(4, 28);
             this.tpHuongDan.Name = "tpHuongDan";
-            this.tpHuongDan.Size = new System.Drawing.Size(767, 115);
+            this.tpHuongDan.Size = new System.Drawing.Size(792, 115);
             this.tpHuongDan.TabIndex = 3;
             this.tpHuongDan.Text = "Hướng dẫn";
             this.tpHuongDan.UseVisualStyleBackColor = true;
@@ -393,6 +413,7 @@ namespace quanLyKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 470);
             this.Controls.Add(this.tcThanhDieuHuong);
             this.Controls.Add(this.pnlContainer);
@@ -402,7 +423,8 @@ namespace quanLyKho
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lý kho vật liệu xây dựng";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.tcThanhDieuHuong.ResumeLayout(false);
             this.tpHeThong.ResumeLayout(false);
             this.tpDanhMuc.ResumeLayout(false);

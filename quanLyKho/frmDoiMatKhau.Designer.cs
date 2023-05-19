@@ -43,6 +43,9 @@ namespace quanLyKho
             this.btnHuy = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblCapNhatMatKhau = new System.Windows.Forms.Label();
+            this.btnXemMatKhauCu = new System.Windows.Forms.Button();
+            this.btnXemMatKhauMoi = new System.Windows.Forms.Button();
+            this.btnXemMatKhauXacNhan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,6 +100,7 @@ namespace quanLyKho
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.Size = new System.Drawing.Size(262, 27);
             this.txtMatKhauCu.TabIndex = 5;
+            this.txtMatKhauCu.UseSystemPasswordChar = true;
             this.txtMatKhauCu.TextChanged += new System.EventHandler(this.txtMatKhauCu_TextChanged);
             // 
             // txtMatKhauMoi
@@ -105,6 +109,7 @@ namespace quanLyKho
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.Size = new System.Drawing.Size(262, 27);
             this.txtMatKhauMoi.TabIndex = 6;
+            this.txtMatKhauMoi.UseSystemPasswordChar = true;
             this.txtMatKhauMoi.TextChanged += new System.EventHandler(this.txtMatKhauMoi_TextChanged);
             // 
             // txtNhapLaiMatKhauMoi
@@ -113,6 +118,7 @@ namespace quanLyKho
             this.txtNhapLaiMatKhauMoi.Name = "txtNhapLaiMatKhauMoi";
             this.txtNhapLaiMatKhauMoi.Size = new System.Drawing.Size(262, 27);
             this.txtNhapLaiMatKhauMoi.TabIndex = 7;
+            this.txtNhapLaiMatKhauMoi.UseSystemPasswordChar = true;
             this.txtNhapLaiMatKhauMoi.TextChanged += new System.EventHandler(this.txtNhapLaiMatKhauMoi_TextChanged);
             // 
             // btnCapNhat
@@ -154,11 +160,44 @@ namespace quanLyKho
             this.lblCapNhatMatKhau.Text = "CẬP NHẬT MẬT KHẨU\r\n";
             this.lblCapNhatMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnXemMatKhauCu
+            // 
+            this.btnXemMatKhauCu.Image = ((System.Drawing.Image)(resources.GetObject("btnXemMatKhauCu.Image")));
+            this.btnXemMatKhauCu.Location = new System.Drawing.Point(519, 79);
+            this.btnXemMatKhauCu.Name = "btnXemMatKhauCu";
+            this.btnXemMatKhauCu.Size = new System.Drawing.Size(60, 45);
+            this.btnXemMatKhauCu.TabIndex = 11;
+            this.btnXemMatKhauCu.UseVisualStyleBackColor = true;
+            this.btnXemMatKhauCu.Click += new System.EventHandler(this.btnXemMatKhauCu_Click);
+            // 
+            // btnXemMatKhauMoi
+            // 
+            this.btnXemMatKhauMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnXemMatKhauMoi.Image")));
+            this.btnXemMatKhauMoi.Location = new System.Drawing.Point(519, 128);
+            this.btnXemMatKhauMoi.Name = "btnXemMatKhauMoi";
+            this.btnXemMatKhauMoi.Size = new System.Drawing.Size(60, 45);
+            this.btnXemMatKhauMoi.TabIndex = 12;
+            this.btnXemMatKhauMoi.UseVisualStyleBackColor = true;
+            this.btnXemMatKhauMoi.Click += new System.EventHandler(this.btnXemMatKhauMoi_Click);
+            // 
+            // btnXemMatKhauXacNhan
+            // 
+            this.btnXemMatKhauXacNhan.Image = ((System.Drawing.Image)(resources.GetObject("btnXemMatKhauXacNhan.Image")));
+            this.btnXemMatKhauXacNhan.Location = new System.Drawing.Point(519, 176);
+            this.btnXemMatKhauXacNhan.Name = "btnXemMatKhauXacNhan";
+            this.btnXemMatKhauXacNhan.Size = new System.Drawing.Size(60, 45);
+            this.btnXemMatKhauXacNhan.TabIndex = 13;
+            this.btnXemMatKhauXacNhan.UseVisualStyleBackColor = true;
+            this.btnXemMatKhauXacNhan.Click += new System.EventHandler(this.btnXemMatKhauXacNhan_Click);
+            // 
             // frmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 301);
+            this.ClientSize = new System.Drawing.Size(588, 293);
+            this.Controls.Add(this.btnXemMatKhauXacNhan);
+            this.Controls.Add(this.btnXemMatKhauMoi);
+            this.Controls.Add(this.btnXemMatKhauCu);
             this.Controls.Add(this.lblCapNhatMatKhau);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnCapNhat);
@@ -196,5 +235,8 @@ namespace quanLyKho
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label lblCapNhatMatKhau;
+        private System.Windows.Forms.Button btnXemMatKhauXacNhan;
+        private System.Windows.Forms.Button btnXemMatKhauMoi;
+        private System.Windows.Forms.Button btnXemMatKhauCu;
     }
 }

@@ -44,5 +44,10 @@ namespace quanLyKho
             txtTenNguoiDung.Text = account.TenNguoiDung;
             txtMatKhau.Text = account.MatKhau;
         }
+
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+            anHienMatKhau.Instance.anHoacHienMatKhau(txtMatKhau, btnXem);
+        }
     }
 }

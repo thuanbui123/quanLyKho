@@ -44,6 +44,10 @@ namespace quanLyKho
                 currentChildForm.Close();
             }
             currentChildForm = childForm;
+            int formWidth = childForm.Width;
+            int pnlWidth = pnlContainer.Width;
+            int width = (pnlWidth - formWidth) / 2;
+            pnlContainer.Padding = new Padding(width, 0, 0, 0);
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;

@@ -38,6 +38,7 @@ namespace quanLyKho
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnXem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,11 +103,22 @@ namespace quanLyKho
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnXem
+            // 
+            this.btnXem.Image = ((System.Drawing.Image)(resources.GetObject("btnXem.Image")));
+            this.btnXem.Location = new System.Drawing.Point(424, 61);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(60, 45);
+            this.btnXem.TabIndex = 10;
+            this.btnXem.UseVisualStyleBackColor = true;
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
+            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 212);
+            this.ClientSize = new System.Drawing.Size(490, 212);
+            this.Controls.Add(this.btnXem);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatKhau);
@@ -135,5 +147,6 @@ namespace quanLyKho
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnXem;
     }
 }

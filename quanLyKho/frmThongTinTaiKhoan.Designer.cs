@@ -29,6 +29,7 @@ namespace quanLyKho
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongTinTaiKhoan));
             this.lblThongTinTaiKhoan = new System.Windows.Forms.Label();
             this.lblTenDangNhap = new System.Windows.Forms.Label();
             this.lblTenNguoiDung = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@ namespace quanLyKho
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.txtTenNguoiDung = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.btnXem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblThongTinTaiKhoan
@@ -99,12 +101,24 @@ namespace quanLyKho
             this.txtMatKhau.ReadOnly = true;
             this.txtMatKhau.Size = new System.Drawing.Size(260, 26);
             this.txtMatKhau.TabIndex = 8;
+            this.txtMatKhau.UseSystemPasswordChar = true;
+            // 
+            // btnXem
+            // 
+            this.btnXem.Image = ((System.Drawing.Image)(resources.GetObject("btnXem.Image")));
+            this.btnXem.Location = new System.Drawing.Point(442, 157);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(60, 45);
+            this.btnXem.TabIndex = 9;
+            this.btnXem.UseVisualStyleBackColor = true;
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
             // frmThongTinTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 233);
+            this.ClientSize = new System.Drawing.Size(512, 233);
+            this.Controls.Add(this.btnXem);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTenNguoiDung);
             this.Controls.Add(this.txtTenDangNhap);
@@ -114,7 +128,7 @@ namespace quanLyKho
             this.Controls.Add(this.lblThongTinTaiKhoan);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmThongTinTaiKhoan";
             this.Text = "Thông tin tài khoản";
             this.Load += new System.EventHandler(this.frmThongTinTaiKhoan_Load);
@@ -132,5 +146,6 @@ namespace quanLyKho
         private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.TextBox txtTenNguoiDung;
         private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.Button btnXem;
     }
 }

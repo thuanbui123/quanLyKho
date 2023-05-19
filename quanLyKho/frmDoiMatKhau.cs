@@ -170,12 +170,18 @@ namespace quanLyKho
                 status = false;
             }
 
+            if (txtMatKhauCu.Text == txtMatKhauMoi.Text)
+            {
+                errorProvider1.SetError(txtMatKhauMoi, "Mật khẩu cũ và mật khẩu mới giống nhau");
+                status = false;
+            }
+
             return status;
         }
 
         private bool doiMatKhau ()
         {
-            bool status = true;
+            bool status = kiemTraDuLieu(); 
             string matKhauCu = txtMatKhauCu.Text;
             string matKhauMoi = txtMatKhauMoi.Text;
 
@@ -190,14 +196,16 @@ namespace quanLyKho
             {
                 status = false;
             }
-            else
+            
+            if (status)
             {
-                string query1 = "Update taiKhoan set matKhau = N'" + matKhauMoi + "' where tenDangNhap = N'"+txtUserName.Text+"'";
+                string query1 = "Update taiKhoan set matKhau = N'" + matKhauMoi + "' where tenDangNhap = N'" + txtUserName.Text + "'";
                 int dong = DataProvider.Instance.executeNonQuery(query1);
                 if (dong > 0)
                 {
                     status = true;
-                } else
+                }
+                else
                 {
                     status = false;
                 }
@@ -217,7 +225,21 @@ namespace quanLyKho
             {
                 MessageBox.Show("Thay đổi mật khẩu không thành công", "Thông báo");
             }
-            kiemTraDuLieu();
+        }
+
+        private void btnXemMatKhauCu_Click(object sender, EventArgs e)
+        {
+            anHienMatKhau.Instance.anHoacHienMatKhau(txtMatKhauCu, btnXemMatKhauCu);
+        }
+
+        private void btnXemMatKhauMoi_Click(object sender, EventArgs e)
+        {
+            anHienMatKhau.Instance.anHoacHienMatKhau(txtMatKhauMoi, btnXemMatKhauMoi);
+        }
+
+        private void btnXemMatKhauXacNhan_Click(object sender, EventArgs e)
+        {
+            anHienMatKhau.Instance.anHoacHienMatKhau(txtNhapLaiMatKhauMoi, btnXemMatKhauXacNhan);
         }
     }
 }
