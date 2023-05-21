@@ -118,5 +118,10 @@ namespace quanLyKho
             int i = dgvMain.CurrentCell.RowIndex;
             getDongThuI(i);
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

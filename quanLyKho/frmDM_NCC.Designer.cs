@@ -42,16 +42,16 @@ namespace quanLyKho
             this.label2 = new System.Windows.Forms.Label();
             this.rdb_DM_NCC_TheoTen = new System.Windows.Forms.RadioButton();
             this.rdb_DM_NCC_TheoMa = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_DM_NCC_Huy = new System.Windows.Forms.Button();
             this.btn_DM_NCC_Luu = new System.Windows.Forms.Button();
             this.btn_DM_NCC_Xoa = new System.Windows.Forms.Button();
             this.btn_DM_NCC_Sua = new System.Windows.Forms.Button();
             this.btn_DM_NCC_Them = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_DM_NCC_TimKiem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_DM_NCC_TimKiem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DM_NCC)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -62,18 +62,19 @@ namespace quanLyKho
             // dgv_DM_NCC
             // 
             this.dgv_DM_NCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DM_NCC.Location = new System.Drawing.Point(64, 477);
+            this.dgv_DM_NCC.Location = new System.Drawing.Point(64, 450);
             this.dgv_DM_NCC.Name = "dgv_DM_NCC";
             this.dgv_DM_NCC.RowHeadersWidth = 51;
             this.dgv_DM_NCC.RowTemplate.Height = 24;
-            this.dgv_DM_NCC.Size = new System.Drawing.Size(1072, 201);
+            this.dgv_DM_NCC.Size = new System.Drawing.Size(1072, 371);
             this.dgv_DM_NCC.TabIndex = 7;
+            this.dgv_DM_NCC.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_DM_NCC_CellMouseClick);
             // 
             // txt_DM_NCC_TimKiem
             // 
             this.txt_DM_NCC_TimKiem.Location = new System.Drawing.Point(301, 31);
             this.txt_DM_NCC_TimKiem.Name = "txt_DM_NCC_TimKiem";
-            this.txt_DM_NCC_TimKiem.Size = new System.Drawing.Size(280, 26);
+            this.txt_DM_NCC_TimKiem.Size = new System.Drawing.Size(280, 30);
             this.txt_DM_NCC_TimKiem.TabIndex = 1;
             // 
             // groupBox1
@@ -88,7 +89,7 @@ namespace quanLyKho
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(31, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(693, 286);
+            this.groupBox1.Size = new System.Drawing.Size(693, 264);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cập nhật Nhà Cung Cấp";
@@ -97,28 +98,28 @@ namespace quanLyKho
             // 
             this.txt_DM_NCC_DienThoai.Location = new System.Drawing.Point(227, 192);
             this.txt_DM_NCC_DienThoai.Name = "txt_DM_NCC_DienThoai";
-            this.txt_DM_NCC_DienThoai.Size = new System.Drawing.Size(254, 26);
+            this.txt_DM_NCC_DienThoai.Size = new System.Drawing.Size(254, 30);
             this.txt_DM_NCC_DienThoai.TabIndex = 7;
             // 
             // txt_DM_NCC_DiaChi
             // 
             this.txt_DM_NCC_DiaChi.Location = new System.Drawing.Point(227, 150);
             this.txt_DM_NCC_DiaChi.Name = "txt_DM_NCC_DiaChi";
-            this.txt_DM_NCC_DiaChi.Size = new System.Drawing.Size(254, 26);
+            this.txt_DM_NCC_DiaChi.Size = new System.Drawing.Size(254, 30);
             this.txt_DM_NCC_DiaChi.TabIndex = 6;
             // 
             // txt_DM_TenNCC
             // 
             this.txt_DM_TenNCC.Location = new System.Drawing.Point(227, 102);
             this.txt_DM_TenNCC.Name = "txt_DM_TenNCC";
-            this.txt_DM_TenNCC.Size = new System.Drawing.Size(254, 26);
+            this.txt_DM_TenNCC.Size = new System.Drawing.Size(254, 30);
             this.txt_DM_TenNCC.TabIndex = 5;
             // 
             // txt_DM_MaNCC
             // 
             this.txt_DM_MaNCC.Location = new System.Drawing.Point(227, 60);
             this.txt_DM_MaNCC.Name = "txt_DM_MaNCC";
-            this.txt_DM_MaNCC.Size = new System.Drawing.Size(254, 26);
+            this.txt_DM_MaNCC.Size = new System.Drawing.Size(254, 30);
             this.txt_DM_MaNCC.TabIndex = 4;
             // 
             // label4
@@ -126,7 +127,7 @@ namespace quanLyKho
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(22, 195);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 19);
+            this.label4.Size = new System.Drawing.Size(92, 22);
             this.label4.TabIndex = 3;
             this.label4.Text = "Điện thoại";
             // 
@@ -135,7 +136,7 @@ namespace quanLyKho
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(22, 150);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 19);
+            this.label5.Size = new System.Drawing.Size(68, 22);
             this.label5.TabIndex = 2;
             this.label5.Text = "Địa chỉ";
             // 
@@ -144,7 +145,7 @@ namespace quanLyKho
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(22, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 19);
+            this.label3.Size = new System.Drawing.Size(151, 22);
             this.label3.TabIndex = 1;
             this.label3.Text = "Tên Nhà cung cấp";
             // 
@@ -153,7 +154,7 @@ namespace quanLyKho
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(22, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 19);
+            this.label2.Size = new System.Drawing.Size(147, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Nhà cung cấp";
             // 
@@ -162,7 +163,7 @@ namespace quanLyKho
             this.rdb_DM_NCC_TheoTen.AutoSize = true;
             this.rdb_DM_NCC_TheoTen.Location = new System.Drawing.Point(763, 31);
             this.rdb_DM_NCC_TheoTen.Name = "rdb_DM_NCC_TheoTen";
-            this.rdb_DM_NCC_TheoTen.Size = new System.Drawing.Size(85, 23);
+            this.rdb_DM_NCC_TheoTen.Size = new System.Drawing.Size(106, 26);
             this.rdb_DM_NCC_TheoTen.TabIndex = 3;
             this.rdb_DM_NCC_TheoTen.TabStop = true;
             this.rdb_DM_NCC_TheoTen.Text = "Theo Tên";
@@ -173,15 +174,30 @@ namespace quanLyKho
             this.rdb_DM_NCC_TheoMa.AutoSize = true;
             this.rdb_DM_NCC_TheoMa.Location = new System.Drawing.Point(614, 31);
             this.rdb_DM_NCC_TheoMa.Name = "rdb_DM_NCC_TheoMa";
-            this.rdb_DM_NCC_TheoMa.Size = new System.Drawing.Size(83, 23);
+            this.rdb_DM_NCC_TheoMa.Size = new System.Drawing.Size(102, 26);
             this.rdb_DM_NCC_TheoMa.TabIndex = 2;
             this.rdb_DM_NCC_TheoMa.TabStop = true;
             this.rdb_DM_NCC_TheoMa.Text = "Theo Mã";
             this.rdb_DM_NCC_TheoMa.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btn_DM_NCC_Huy);
+            this.groupBox2.Controls.Add(this.btn_DM_NCC_Luu);
+            this.groupBox2.Controls.Add(this.btn_DM_NCC_Xoa);
+            this.groupBox2.Controls.Add(this.btn_DM_NCC_Sua);
+            this.groupBox2.Controls.Add(this.btn_DM_NCC_Them);
+            this.groupBox2.Location = new System.Drawing.Point(847, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(226, 340);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chức năng";
+            // 
             // btn_DM_NCC_Huy
             // 
             this.btn_DM_NCC_Huy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_DM_NCC_Huy.Image = global::quanLyKho.Properties.Resources.hủy_bỏ;
             this.btn_DM_NCC_Huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_DM_NCC_Huy.Location = new System.Drawing.Point(45, 280);
             this.btn_DM_NCC_Huy.Name = "btn_DM_NCC_Huy";
@@ -191,10 +207,12 @@ namespace quanLyKho
             this.btn_DM_NCC_Huy.Text = "HỦY";
             this.btn_DM_NCC_Huy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DM_NCC_Huy.UseVisualStyleBackColor = true;
+            this.btn_DM_NCC_Huy.Click += new System.EventHandler(this.btn_DM_NCC_Huy_Click);
             // 
             // btn_DM_NCC_Luu
             // 
             this.btn_DM_NCC_Luu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_DM_NCC_Luu.Image = global::quanLyKho.Properties.Resources.Lưu;
             this.btn_DM_NCC_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_DM_NCC_Luu.Location = new System.Drawing.Point(45, 218);
             this.btn_DM_NCC_Luu.Name = "btn_DM_NCC_Luu";
@@ -204,10 +222,12 @@ namespace quanLyKho
             this.btn_DM_NCC_Luu.Text = "LƯU";
             this.btn_DM_NCC_Luu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DM_NCC_Luu.UseVisualStyleBackColor = true;
+            this.btn_DM_NCC_Luu.Click += new System.EventHandler(this.btn_DM_NCC_Luu_Click);
             // 
             // btn_DM_NCC_Xoa
             // 
             this.btn_DM_NCC_Xoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_DM_NCC_Xoa.Image = global::quanLyKho.Properties.Resources.Xóa;
             this.btn_DM_NCC_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_DM_NCC_Xoa.Location = new System.Drawing.Point(45, 156);
             this.btn_DM_NCC_Xoa.Name = "btn_DM_NCC_Xoa";
@@ -217,10 +237,12 @@ namespace quanLyKho
             this.btn_DM_NCC_Xoa.Text = "XÓA";
             this.btn_DM_NCC_Xoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DM_NCC_Xoa.UseVisualStyleBackColor = true;
+            this.btn_DM_NCC_Xoa.Click += new System.EventHandler(this.btn_DM_NCC_Xoa_Click);
             // 
             // btn_DM_NCC_Sua
             // 
             this.btn_DM_NCC_Sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_DM_NCC_Sua.Image = global::quanLyKho.Properties.Resources.Sửa;
             this.btn_DM_NCC_Sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_DM_NCC_Sua.Location = new System.Drawing.Point(45, 94);
             this.btn_DM_NCC_Sua.Name = "btn_DM_NCC_Sua";
@@ -230,10 +252,12 @@ namespace quanLyKho
             this.btn_DM_NCC_Sua.Text = "SỬA";
             this.btn_DM_NCC_Sua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DM_NCC_Sua.UseVisualStyleBackColor = true;
+            this.btn_DM_NCC_Sua.Click += new System.EventHandler(this.btn_DM_NCC_Sua_Click);
             // 
             // btn_DM_NCC_Them
             // 
             this.btn_DM_NCC_Them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_DM_NCC_Them.Image = global::quanLyKho.Properties.Resources.Thêm;
             this.btn_DM_NCC_Them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_DM_NCC_Them.Location = new System.Drawing.Point(45, 32);
             this.btn_DM_NCC_Them.Name = "btn_DM_NCC_Them";
@@ -243,27 +267,14 @@ namespace quanLyKho
             this.btn_DM_NCC_Them.Text = "THÊM";
             this.btn_DM_NCC_Them.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DM_NCC_Them.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btn_DM_NCC_Huy);
-            this.groupBox2.Controls.Add(this.btn_DM_NCC_Luu);
-            this.groupBox2.Controls.Add(this.btn_DM_NCC_Xoa);
-            this.groupBox2.Controls.Add(this.btn_DM_NCC_Sua);
-            this.groupBox2.Controls.Add(this.btn_DM_NCC_Them);
-            this.groupBox2.Location = new System.Drawing.Point(910, 24);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(226, 374);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Chức năng";
+            this.btn_DM_NCC_Them.Click += new System.EventHandler(this.btn_DM_NCC_Them_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(163, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 19);
+            this.label1.Size = new System.Drawing.Size(264, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN NHÀ CUNG CẤP";
             // 
@@ -271,22 +282,10 @@ namespace quanLyKho
             // 
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(64, 24);
+            this.panel1.Location = new System.Drawing.Point(108, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(756, 374);
+            this.panel1.Size = new System.Drawing.Size(733, 327);
             this.panel1.TabIndex = 4;
-            // 
-            // btn_DM_NCC_TimKiem
-            // 
-            this.btn_DM_NCC_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DM_NCC_TimKiem.Location = new System.Drawing.Point(140, 25);
-            this.btn_DM_NCC_TimKiem.Name = "btn_DM_NCC_TimKiem";
-            this.btn_DM_NCC_TimKiem.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btn_DM_NCC_TimKiem.Size = new System.Drawing.Size(155, 42);
-            this.btn_DM_NCC_TimKiem.TabIndex = 0;
-            this.btn_DM_NCC_TimKiem.Text = "Tìm kiếm";
-            this.btn_DM_NCC_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_DM_NCC_TimKiem.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -294,14 +293,28 @@ namespace quanLyKho
             this.panel2.Controls.Add(this.rdb_DM_NCC_TheoMa);
             this.panel2.Controls.Add(this.txt_DM_NCC_TimKiem);
             this.panel2.Controls.Add(this.btn_DM_NCC_TimKiem);
-            this.panel2.Location = new System.Drawing.Point(64, 404);
+            this.panel2.Location = new System.Drawing.Point(64, 358);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1072, 86);
             this.panel2.TabIndex = 6;
             // 
+            // btn_DM_NCC_TimKiem
+            // 
+            this.btn_DM_NCC_TimKiem.Image = global::quanLyKho.Properties.Resources.Tìm_kiếm;
+            this.btn_DM_NCC_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_DM_NCC_TimKiem.Location = new System.Drawing.Point(152, 25);
+            this.btn_DM_NCC_TimKiem.Name = "btn_DM_NCC_TimKiem";
+            this.btn_DM_NCC_TimKiem.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btn_DM_NCC_TimKiem.Size = new System.Drawing.Size(143, 42);
+            this.btn_DM_NCC_TimKiem.TabIndex = 0;
+            this.btn_DM_NCC_TimKiem.Text = "Tìm kiếm";
+            this.btn_DM_NCC_TimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_DM_NCC_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_DM_NCC_TimKiem.Click += new System.EventHandler(this.btn_DM_NCC_TimKiem_Click);
+            // 
             // frm_DM_NCC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 703);
             this.Controls.Add(this.dgv_DM_NCC);
@@ -312,6 +325,7 @@ namespace quanLyKho
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_DM_NCC";
             this.Text = "frmDM_NCC";
+            this.Load += new System.EventHandler(this.frm_DM_NCC_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DM_NCC)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

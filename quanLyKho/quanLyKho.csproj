@@ -249,6 +249,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -263,6 +264,29 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Thêm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sửa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xóa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thoát.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lưu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hủy bỏ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tìm kiếm.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
