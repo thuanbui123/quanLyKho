@@ -23,18 +23,39 @@ namespace quanLyKho
         {
             bool status = true;
             errorProvider1.Clear();
+            object data = DataProvider.Instance.executeScalar("Select count (*) from taiKhoan where tenDangNhap = N'"+txtTenDangNhap.Text+ "' COLLATE SQL_Latin1_General_CP1_CS_AS");
+            int soLuong = (int)data;
             if (txtTenDangNhap.Text.Length == 0)
             {
                 errorProvider1.SetError(txtTenDangNhap, "Chưa điền tên đăng nhập!");
+                txtTenDangNhap.Focus();
                 status = false;
+            }
+
+            if (soLuong < 1)
+            {
+                errorProvider1.SetError(txtTenDangNhap, "Tên đăng nhập không đúng!");
+                status = false;
+            }
+            else
+            {
+                data = DataProvider.Instance.executeScalar("Select count (*) from taiKhoan where tenDangNhap = N'" + txtTenDangNhap.Text + "' COLLATE SQL_Latin1_General_CP1_CS_AS and matKhau = N'" + txtMatKhau.Text + "'");
+                soLuong = (int)data;
+
+                if (soLuong < 1)
+                {
+                    errorProvider1.SetError(txtMatKhau, "mật khẩu không đúng!");
+                    txtMatKhau.Focus();
+                    status = false;
+                }
             }
 
             if (txtMatKhau.Text.Length == 0)
             {
                 errorProvider1.SetError(txtMatKhau, "Chưa nhập mật khẩu!");
+                txtMatKhau.Focus();
                 status = false;
             }
-
 
             if (status)
             {
@@ -44,16 +65,12 @@ namespace quanLyKho
                     this.Hide();
                     f.ShowDialog();
                 }
-                else
-                {
-                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", "Thông báo");
-                }
             }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private bool dangNhap (string userName, string password) 
@@ -70,17 +87,27 @@ namespace quanLyKho
             txtMatKhau.Text = "";
         }
 
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+            anHienMatKhau.Instance.anHoacHienMatKhau(txtMatKhau, btnXem);
+        }
+
+        private static bool isClose = true;
+        private void frmDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (isClose)
+            {
+                Application.Exit();
+            }
+        }
+
         private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn thoát chương trình!", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
+                isClose = false;
             }
-        }
-
-        private void frmDangNhap_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

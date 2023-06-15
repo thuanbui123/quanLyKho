@@ -25,11 +25,11 @@ namespace quanLyKho
             txtTenDangNhap.Text = value;
         }
 
-        public Account getAccount ()
+        public Account getAccount()
         {
             Account account;
 
-            string query = "select * from taiKhoan where tenDangNhap = N'"+txtTenDangNhap.Text+"'";
+            string query = "select * from taiKhoan where tenDangNhap = N'" + txtTenDangNhap.Text + "'";
 
             DataTable data = DataProvider.Instance.executeQuery(query);
 
@@ -43,6 +43,11 @@ namespace quanLyKho
             Account account = getAccount();
             txtTenNguoiDung.Text = account.TenNguoiDung;
             txtMatKhau.Text = account.MatKhau;
+        }
+
+        private void btnXem_Click_1(object sender, EventArgs e)
+        {
+            anHienMatKhau.Instance.anHoacHienMatKhau(txtMatKhau, btnXem);
         }
     }
 }

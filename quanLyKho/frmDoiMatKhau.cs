@@ -48,7 +48,7 @@ namespace quanLyKho
         {
             //Kiểm tra xem tất cả các textbox đã có sự thay đổi chưa
             bool allTextBoxChanged = true;
-            foreach(TextBox textBox in textBoxList)
+            foreach (TextBox textBox in textBoxList)
             {
                 if (string.IsNullOrEmpty(textBox.Text))
                 {
@@ -58,10 +58,11 @@ namespace quanLyKho
             }
 
             //Nếu tất cả các textBox đều có sự thay đổi thì enable các button
-            if(allTextBoxChanged)
+            if (allTextBoxChanged)
             {
                 EnableButtons();
-            } else
+            }
+            else
             {
                 DisableButtons();
             }
@@ -69,18 +70,19 @@ namespace quanLyKho
 
         private void EnableButtons()
         {
-            foreach(Button button in buttonList)
+            foreach (Button button in buttonList)
             {
                 button.Enabled = true;
             }
         }
 
-        private void enableHuy ()
+        private void enableHuy()
         {
             if (txtUserName.Text.Length != 0 || txtMatKhauMoi.Text.Length != 0 || txtMatKhauCu.Text.Length != 0 || txtNhapLaiMatKhauMoi.Text.Length != 0)
             {
                 btnHuy.Enabled = true;
-            } else
+            }
+            else
             {
                 btnHuy.Enabled = false;
             }
@@ -88,7 +90,7 @@ namespace quanLyKho
 
         private void DisableButtons()
         {
-            foreach(Button button in buttonList)
+            foreach (Button button in buttonList)
             {
                 button.Enabled = false;
             }
@@ -129,16 +131,16 @@ namespace quanLyKho
         }
 
         public string userName;
-        
-        public void getValue (string value)
+
+        public void getValue(string value)
         {
             txtUserName.Text = value;
         }
 
-        private bool kiemTraDuLieu ()
+        private bool kiemTraDuLieu()
         {
             bool status = true;
-            
+
 
             if (txtUserName.Text.Length == 0)
             {
@@ -146,42 +148,63 @@ namespace quanLyKho
                 status = false;
             }
 
-            if (txtMatKhauCu.Text.Length == 0)
-            {
-                errorProvider1.SetError(txtMatKhauCu, "Bạn chưa nhập mật khẩu cũ!");
-                status = false;
-            }
-
-            if (txtMatKhauMoi.Text.Length == 0)
-            {
-                errorProvider1.SetError(txtMatKhauMoi, "Bạn chưa nhập mật khẩu mới!");
-                status = false;
-            }
-
             if (txtNhapLaiMatKhauMoi.Text.Length == 0)
             {
                 errorProvider1.SetError(txtNhapLaiMatKhauMoi, "Bạn chưa xác nhận mật khẩu mới!");
+                txtNhapLaiMatKhauMoi.Focus();
                 status = false;
             }
 
             if (txtMatKhauMoi.Text != txtNhapLaiMatKhauMoi.Text)
             {
                 errorProvider1.SetError(txtNhapLaiMatKhauMoi, "Mật khẩu bạn vừa xác nhận không đúng");
+                txtNhapLaiMatKhauMoi.Focus();
                 status = false;
+            }
+
+            if (txtMatKhauCu.Text == txtMatKhauMoi.Text)
+            {
+                errorProvider1.SetError(txtMatKhauMoi, "Mật khẩu cũ và mật khẩu mới giống nhau");
+                txtMatKhauCu.Focus();
+                status = false;
+            }
+
+            if (txtMatKhauMoi.Text.Length == 0)
+            {
+                errorProvider1.SetError(txtMatKhauMoi, "Bạn chưa nhập mật khẩu mới!");
+                txtMatKhauMoi.Focus();
+                status = false;
+            }
+
+            if (txtMatKhauCu.Text.Length == 0)
+            {
+                errorProvider1.SetError(txtMatKhauCu, "Bạn chưa nhập mật khẩu cũ!");
+                txtMatKhauCu.Focus();
+                status = false;
+            }
+            else
+            {
+                object i = DataProvider.Instance.executeScalar("Select count(*) from taiKhoan where tenDangNhap = '" + txtUserName.Text + "' and matKhau = '" + txtMatKhauCu.Text + "'");
+                if (Convert.ToInt32(i) <= 0)
+                {
+                    errorProvider1.SetError(txtMatKhauCu, "Mật khẩu cũ không chính xác!");
+                    txtMatKhauCu.Focus();
+                    status = false;
+                }
             }
 
             return status;
         }
 
-        private bool doiMatKhau ()
+        private bool doiMatKhau()
         {
-            bool status = true;
+            bool status = kiemTraDuLieu();
             string matKhauCu = txtMatKhauCu.Text;
             string matKhauMoi = txtMatKhauMoi.Text;
 
             int soLuong;
 
-            string query = "Select count(*) from taiKhoan where tenDangNhap = N'"+ txtUserName.Text+"'and matKhau = N'"+matKhauCu+"'";
+            string query = "Select count(*) from taiKhoan where tenDangNhap = N'" + txtUserName.Text + "'and matKhau = N'" + matKhauCu + "'";
 
             Object data = DataProvider.Instance.executeScalar(query);
             soLuong = (int)data;
@@ -190,14 +213,16 @@ namespace quanLyKho
             {
                 status = false;
             }
-            else
+
+            if (status)
             {
-                string query1 = "Update taiKhoan set matKhau = N'" + matKhauMoi + "' where tenDangNhap = N'"+txtUserName.Text+"'";
+                string query1 = "Update taiKhoan set matKhau = N'" + matKhauMoi + "' where tenDangNhap = N'" + txtUserName.Text + "'";
                 int dong = DataProvider.Instance.executeNonQuery(query1);
                 if (dong > 0)
                 {
                     status = true;
-                } else
+                }
+                else
                 {
                     status = false;
                 }
@@ -212,12 +237,30 @@ namespace quanLyKho
             bool status = doiMatKhau();
             if (status)
             {
+                txtMatKhauCu.Text = "";
+                txtMatKhauMoi.Text = "";
+                txtNhapLaiMatKhauMoi.Text = "";
                 MessageBox.Show("Thay đổi mật khẩu thành công", "Thông báo");
-            } else
+            }
+            else
             {
                 MessageBox.Show("Thay đổi mật khẩu không thành công", "Thông báo");
             }
-            kiemTraDuLieu();
+        }
+
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+            anHienMatKhau.Instance.anHoacHienMatKhau(txtMatKhauCu, btnXem);
+        }
+
+        private void btnXemMatKhauMoi_Click_1(object sender, EventArgs e)
+        {
+            anHienMatKhau.Instance.anHoacHienMatKhau(txtMatKhauMoi, btnXemMatKhauMoi);
+        }
+
+        private void btnXemMatKhauXacNhan_Click_1(object sender, EventArgs e)
+        {
+            anHienMatKhau.Instance.anHoacHienMatKhau(txtNhapLaiMatKhauMoi, btnXemMatKhauXacNhan);
         }
     }
 }
