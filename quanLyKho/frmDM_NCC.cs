@@ -65,6 +65,10 @@ namespace quanLyKho
                     txt_DM_NCC_DiaChi.Enabled = false;
                     txt_DM_TenNCC.Enabled = false;
                     txt_DM_NCC_DienThoai.Enabled = false;
+
+                    txt_DM_NCC_TimKiem.Text = "";
+                    rdb_DM_NCC_TheoMa.Checked = false;
+                    rdb_DM_NCC_TheoTen.Checked = false;
                     break;
                 case "Adding":
                     btn_DM_NCC_Them.Enabled = false;
@@ -113,27 +117,29 @@ namespace quanLyKho
                 string query = "select ncc.id, ncc.tenNhaCungCap, ncc.diaChi, ncc.soDienThoai from nhaCungCap as ncc";
 
                 DataTable data = DataProvider.Instance.executeQuery(query);
+                if (data != null && data.Rows.Count > 0)
+                {
+                    dgv_DM_NCC.DataSource = data;
 
-                dgv_DM_NCC.DataSource = data;
+                    txt_DM_MaNCC.Text = dgv_DM_NCC.Rows[0].Cells[0].Value.ToString();
+                    txt_DM_TenNCC.Text = dgv_DM_NCC.Rows[0].Cells[1].Value.ToString();
+                    txt_DM_NCC_DiaChi.Text = dgv_DM_NCC.Rows[0].Cells[2].Value.ToString();
+                    txt_DM_NCC_DienThoai.Text = dgv_DM_NCC.Rows[0].Cells[3].Value.ToString();
 
-                txt_DM_MaNCC.Text = dgv_DM_NCC.Rows[0].Cells[0].Value.ToString();
-                txt_DM_TenNCC.Text = dgv_DM_NCC.Rows[0].Cells[1].Value.ToString();
-                txt_DM_NCC_DiaChi.Text = dgv_DM_NCC.Rows[0].Cells[2].Value.ToString();
-                txt_DM_NCC_DienThoai.Text = dgv_DM_NCC.Rows[0].Cells[3].Value.ToString();
-
-                dinhDangLuoi();
+                    dinhDangLuoi();
+                }
+                else
+                {
+                    dgv_DM_NCC.DataSource = null;
+                    dinhDangLuoi();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void frm_DM_NCC_Load(object sender, EventArgs e)
-        {
-            loadDuLieuLenLuoi();
-        }
-
+        
         private void btn_DM_NCC_Them_Click(object sender, EventArgs e)
         {
             isAdd = true;
@@ -160,23 +166,24 @@ namespace quanLyKho
                 {
                     MessageBox.Show("Vui long chon du lieu muon Xoa !");
                     return;
-                }
-
-                DialogResult kq = MessageBox.Show("Ban co thuc su muon Xoa khong?", "Hop Thoai", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (kq == DialogResult.Yes)
+                } else
                 {
-                    string query = "delete from nhaCungCap where id = '" + txt_DM_MaNCC.Text.Trim() + "'";
-                    int kt = DataProvider.Instance.executeNonQuery(query);
+                    DialogResult kq = MessageBox.Show("Ban co thuc su muon Xoa khong?", "Hop Thoai", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (kq == DialogResult.Yes)
+                    {
+                        string query = "delete from nhaCungCap where id = '" + txt_DM_MaNCC.Text.Trim() + "'";
+                        int kt = DataProvider.Instance.executeNonQuery(query);
 
-                    if (kt > 0)
-                    {
-                        MessageBox.Show("Xoa thanh cong");
-                        setState("Reset");
-                        bindingData();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xoa that bai");
+                        if (kt > 0)
+                        {
+                            MessageBox.Show("Xoa thanh cong");
+                            setState("Reset");
+                            bindingData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xoa that bai");
+                        }
                     }
                 }
             }
@@ -192,21 +199,25 @@ namespace quanLyKho
             if (txt_DM_MaNCC.Text == "")
             {
                 MessageBox.Show("Vui long nhap ma nha cung cap", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_DM_MaNCC.Focus();
                 stt = false;
             }
             else if (txt_DM_TenNCC.Text == "")
             {
                 MessageBox.Show("Vui long nhap ten nha cung cap", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_DM_TenNCC.Focus();
                 stt = false;
             }
             else if (txt_DM_NCC_DiaChi.Text == "")
             {
                 MessageBox.Show("Vui long nhap dia chi nha cung cap", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_DM_NCC_DiaChi.Focus();
                 stt = false;
             }
             else if (txt_DM_NCC_DienThoai.Text == "")
             {
                 MessageBox.Show("Vui long nhap dien thoai nha cung cap", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_DM_NCC_DienThoai.Focus();
                 stt = false;
             }
             return stt;
@@ -220,7 +231,6 @@ namespace quanLyKho
                 {
                     try
                     {
-
                         string query = "insert into nhaCungCap values('" + txt_DM_MaNCC.Text.Trim() + "', N'" + txt_DM_TenNCC.Text.Trim() + "', N'" + txt_DM_NCC_DiaChi.Text.Trim() + "', '" + txt_DM_NCC_DienThoai.Text.Trim() + "')";
 
                         int kt = DataProvider.Instance.executeNonQuery(query);
@@ -245,7 +255,6 @@ namespace quanLyKho
                 {
                     try
                     {
-
                         string query = "update nhaCungCap set tenNhaCungCap = N'" + txt_DM_TenNCC.Text.Trim() + "', diaChi = N'" + txt_DM_NCC_DiaChi.Text.Trim() + "', soDienThoai = '" + txt_DM_NCC_DienThoai.Text.Trim() + "' where id = '" + txt_DM_MaNCC.Text.Trim() + "'";
 
                         int kt = DataProvider.Instance.executeNonQuery(query);
@@ -281,44 +290,27 @@ namespace quanLyKho
 
         private void btn_DM_NCC_TimKiem_Click(object sender, EventArgs e)
         {
-            if (rdb_DM_NCC_TheoMa.Checked)
+            if(rdb_DM_NCC_TheoMa.Checked == false && rdb_DM_NCC_TheoTen.Checked ==false)
             {
-                try
-                {
-
-                    string query = "select * from nhaCungCap where id like '%" + txt_DM_NCC_TimKiem.Text.Trim() + "%'";
-
-                    DataTable data = DataProvider.Instance.executeQuery(query);
-
-                    dgv_DM_NCC.DataSource = data;
-                    txt_DM_MaNCC.Text = dgv_DM_NCC.Rows[0].Cells[0].Value.ToString();
-                    txt_DM_TenNCC.Text = dgv_DM_NCC.Rows[0].Cells[1].Value.ToString();
-                    txt_DM_NCC_DiaChi.Text = dgv_DM_NCC.Rows[0].Cells[2].Value.ToString();
-                    txt_DM_NCC_DienThoai.Text = dgv_DM_NCC.Rows[0].Cells[3].Value.ToString();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                MessageBox.Show("Vui long chon tieu chi tim kiem !");
             }
-            else if (rdb_DM_NCC_TheoTen.Checked)
+            else
             {
-                try
+                btn_DM_NCC_Huy.Enabled = true;
+
+                btn_DM_NCC_Them.Enabled = false;
+                btn_DM_NCC_Sua.Enabled = false;
+                btn_DM_NCC_Xoa.Enabled = false;
+
+                if (rdb_DM_NCC_TheoMa.Checked)
                 {
-
-                    string query = "select * from nhaCungCap where tenNhaCungCap like '%" + txt_DM_NCC_TimKiem.Text.Trim() + "%'";
-
-                    DataTable data = DataProvider.Instance.executeQuery(query);
-
-                    dgv_DM_NCC.DataSource = data;
-                    txt_DM_MaNCC.Text = dgv_DM_NCC.Rows[0].Cells[0].Value.ToString();
-                    txt_DM_TenNCC.Text = dgv_DM_NCC.Rows[0].Cells[1].Value.ToString();
-                    txt_DM_NCC_DiaChi.Text = dgv_DM_NCC.Rows[0].Cells[2].Value.ToString();
-                    txt_DM_NCC_DienThoai.Text = dgv_DM_NCC.Rows[0].Cells[3].Value.ToString();
+                    string rowFilter = string.Format("{0} like '{1}'", "id", "*" + txt_DM_NCC_TimKiem.Text + "*");
+                    (dgv_DM_NCC.DataSource as DataTable).DefaultView.RowFilter = rowFilter;
                 }
-                catch (Exception ex)
+                else if (rdb_DM_NCC_TheoTen.Checked)
                 {
-                    MessageBox.Show(ex.Message);
+                    string rowFilter = string.Format("{0} like '{1}'", "tenNhaCungCap", "*" + txt_DM_NCC_TimKiem.Text + "*");
+                    (dgv_DM_NCC.DataSource as DataTable).DefaultView.RowFilter = rowFilter;
                 }
             }
         }

@@ -112,9 +112,9 @@ namespace quanLyKho
                 fm.showForm(pnlContainer, f);
             } else if (tcThanhDieuHuong.SelectedIndex == 3)
             {
-                frm_TopMatHangBanChay f = new frm_TopMatHangBanChay();
+                frm_TopMatHangBanChay f1 = new frm_TopMatHangBanChay();
                 formManager fm = new formManager();
-                fm.showForm(pnlContainer, f);
+                fm.showForm(pnlContainer, f1);
             }
             else if (tcThanhDieuHuong.SelectedIndex == 4)
             {

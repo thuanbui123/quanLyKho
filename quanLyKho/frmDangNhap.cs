@@ -61,9 +61,9 @@ namespace quanLyKho
             {
                 if (dangNhap(txtTenDangNhap.Text, txtMatKhau.Text))
                 {
-                    frmMain f = new frmMain(txtTenDangNhap.Text);
+                    frmMain frmMain = new frmMain(txtTenDangNhap.Text);
                     this.Hide();
-                    f.ShowDialog();
+                    frmMain.ShowDialog();
                 }
             }
         }

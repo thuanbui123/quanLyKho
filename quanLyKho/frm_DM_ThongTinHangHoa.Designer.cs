@@ -63,8 +63,8 @@ namespace quanLyKho
             // 
             // lblThongTinHangHoa
             // 
-            this.lblThongTinHangHoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongTinHangHoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblThongTinHangHoa.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongTinHangHoa.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblThongTinHangHoa.Location = new System.Drawing.Point(20, 8);
             this.lblThongTinHangHoa.Name = "lblThongTinHangHoa";
             this.lblThongTinHangHoa.Size = new System.Drawing.Size(821, 34);
@@ -96,35 +96,35 @@ namespace quanLyKho
             this.cboMaLoai.FormattingEnabled = true;
             this.cboMaLoai.Location = new System.Drawing.Point(411, 31);
             this.cboMaLoai.Name = "cboMaLoai";
-            this.cboMaLoai.Size = new System.Drawing.Size(170, 27);
+            this.cboMaLoai.Size = new System.Drawing.Size(170, 30);
             this.cboMaLoai.TabIndex = 9;
             // 
             // txtXuatXu
             // 
             this.txtXuatXu.Location = new System.Drawing.Point(129, 162);
             this.txtXuatXu.Name = "txtXuatXu";
-            this.txtXuatXu.Size = new System.Drawing.Size(170, 26);
+            this.txtXuatXu.Size = new System.Drawing.Size(170, 30);
             this.txtXuatXu.TabIndex = 8;
             // 
             // txtDonViTinh
             // 
             this.txtDonViTinh.Location = new System.Drawing.Point(129, 116);
             this.txtDonViTinh.Name = "txtDonViTinh";
-            this.txtDonViTinh.Size = new System.Drawing.Size(170, 26);
+            this.txtDonViTinh.Size = new System.Drawing.Size(170, 30);
             this.txtDonViTinh.TabIndex = 7;
             // 
             // txtTenHangHoa
             // 
             this.txtTenHangHoa.Location = new System.Drawing.Point(129, 73);
             this.txtTenHangHoa.Name = "txtTenHangHoa";
-            this.txtTenHangHoa.Size = new System.Drawing.Size(170, 26);
+            this.txtTenHangHoa.Size = new System.Drawing.Size(170, 30);
             this.txtTenHangHoa.TabIndex = 6;
             // 
             // txtMaHangHoa
             // 
             this.txtMaHangHoa.Location = new System.Drawing.Point(129, 31);
             this.txtMaHangHoa.Name = "txtMaHangHoa";
-            this.txtMaHangHoa.Size = new System.Drawing.Size(170, 26);
+            this.txtMaHangHoa.Size = new System.Drawing.Size(170, 30);
             this.txtMaHangHoa.TabIndex = 5;
             // 
             // lblXuatXu
@@ -132,7 +132,7 @@ namespace quanLyKho
             this.lblXuatXu.AutoSize = true;
             this.lblXuatXu.Location = new System.Drawing.Point(13, 165);
             this.lblXuatXu.Name = "lblXuatXu";
-            this.lblXuatXu.Size = new System.Drawing.Size(58, 19);
+            this.lblXuatXu.Size = new System.Drawing.Size(72, 22);
             this.lblXuatXu.TabIndex = 4;
             this.lblXuatXu.Text = "Xuất xứ";
             // 
@@ -141,7 +141,7 @@ namespace quanLyKho
             this.lblMaLoai.AutoSize = true;
             this.lblMaLoai.Location = new System.Drawing.Point(330, 34);
             this.lblMaLoai.Name = "lblMaLoai";
-            this.lblMaLoai.Size = new System.Drawing.Size(68, 19);
+            this.lblMaLoai.Size = new System.Drawing.Size(87, 22);
             this.lblMaLoai.TabIndex = 3;
             this.lblMaLoai.Text = "Loại hàng";
             // 
@@ -150,7 +150,7 @@ namespace quanLyKho
             this.lblDonViTinh.AutoSize = true;
             this.lblDonViTinh.Location = new System.Drawing.Point(13, 116);
             this.lblDonViTinh.Name = "lblDonViTinh";
-            this.lblDonViTinh.Size = new System.Drawing.Size(74, 19);
+            this.lblDonViTinh.Size = new System.Drawing.Size(99, 22);
             this.lblDonViTinh.TabIndex = 2;
             this.lblDonViTinh.Text = "Đơn vị tính";
             // 
@@ -159,7 +159,7 @@ namespace quanLyKho
             this.lblTenHangHoa.AutoSize = true;
             this.lblTenHangHoa.Location = new System.Drawing.Point(13, 73);
             this.lblTenHangHoa.Name = "lblTenHangHoa";
-            this.lblTenHangHoa.Size = new System.Drawing.Size(90, 19);
+            this.lblTenHangHoa.Size = new System.Drawing.Size(114, 22);
             this.lblTenHangHoa.TabIndex = 1;
             this.lblTenHangHoa.Text = "Tên hàng hóa";
             // 
@@ -168,7 +168,7 @@ namespace quanLyKho
             this.lblMaHangHoa.AutoSize = true;
             this.lblMaHangHoa.Location = new System.Drawing.Point(13, 34);
             this.lblMaHangHoa.Name = "lblMaHangHoa";
-            this.lblMaHangHoa.Size = new System.Drawing.Size(88, 19);
+            this.lblMaHangHoa.Size = new System.Drawing.Size(110, 22);
             this.lblMaHangHoa.TabIndex = 0;
             this.lblMaHangHoa.Text = "Mã hàng hóa";
             // 
@@ -250,7 +250,7 @@ namespace quanLyKho
             // 
             this.txtTimKiem.Location = new System.Drawing.Point(141, 299);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(170, 26);
+            this.txtTimKiem.Size = new System.Drawing.Size(170, 30);
             this.txtTimKiem.TabIndex = 4;
             // 
             // rdoTheoMa
@@ -258,7 +258,7 @@ namespace quanLyKho
             this.rdoTheoMa.AutoSize = true;
             this.rdoTheoMa.Location = new System.Drawing.Point(374, 300);
             this.rdoTheoMa.Name = "rdoTheoMa";
-            this.rdoTheoMa.Size = new System.Drawing.Size(83, 23);
+            this.rdoTheoMa.Size = new System.Drawing.Size(102, 26);
             this.rdoTheoMa.TabIndex = 6;
             this.rdoTheoMa.TabStop = true;
             this.rdoTheoMa.Text = "Theo Mã";
@@ -269,7 +269,7 @@ namespace quanLyKho
             this.rdoTheoTen.AutoSize = true;
             this.rdoTheoTen.Location = new System.Drawing.Point(533, 299);
             this.rdoTheoTen.Name = "rdoTheoTen";
-            this.rdoTheoTen.Size = new System.Drawing.Size(85, 23);
+            this.rdoTheoTen.Size = new System.Drawing.Size(106, 26);
             this.rdoTheoTen.TabIndex = 7;
             this.rdoTheoTen.TabStop = true;
             this.rdoTheoTen.Text = "Theo Tên";
@@ -284,6 +284,7 @@ namespace quanLyKho
             this.dgvMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMain.Location = new System.Drawing.Point(12, 360);
             this.dgvMain.Name = "dgvMain";
+            this.dgvMain.RowHeadersWidth = 51;
             this.dgvMain.Size = new System.Drawing.Size(850, 281);
             this.dgvMain.TabIndex = 8;
             this.dgvMain.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvMain_CellMouseClick);
@@ -302,7 +303,7 @@ namespace quanLyKho
             // 
             // frm_DM_ThongTinHangHoa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(874, 653);

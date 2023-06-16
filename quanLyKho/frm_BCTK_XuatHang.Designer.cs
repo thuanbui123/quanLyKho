@@ -65,8 +65,8 @@ namespace quanLyKho
             // lbl_BaoCaoHangDaBan
             // 
             this.lbl_BaoCaoHangDaBan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_BaoCaoHangDaBan.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BaoCaoHangDaBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lbl_BaoCaoHangDaBan.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BaoCaoHangDaBan.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbl_BaoCaoHangDaBan.Location = new System.Drawing.Point(0, 0);
             this.lbl_BaoCaoHangDaBan.Name = "lbl_BaoCaoHangDaBan";
             this.lbl_BaoCaoHangDaBan.Size = new System.Drawing.Size(1067, 34);
@@ -137,7 +137,7 @@ namespace quanLyKho
             this.txtTimKiemHoaDon.Enabled = false;
             this.txtTimKiemHoaDon.Location = new System.Drawing.Point(6, 308);
             this.txtTimKiemHoaDon.Name = "txtTimKiemHoaDon";
-            this.txtTimKiemHoaDon.Size = new System.Drawing.Size(196, 26);
+            this.txtTimKiemHoaDon.Size = new System.Drawing.Size(196, 30);
             this.txtTimKiemHoaDon.TabIndex = 9;
             // 
             // lblHoaDon
@@ -145,7 +145,7 @@ namespace quanLyKho
             this.lblHoaDon.AutoSize = true;
             this.lblHoaDon.Location = new System.Drawing.Point(6, 276);
             this.lblHoaDon.Name = "lblHoaDon";
-            this.lblHoaDon.Size = new System.Drawing.Size(62, 19);
+            this.lblHoaDon.Size = new System.Drawing.Size(78, 22);
             this.lblHoaDon.TabIndex = 8;
             this.lblHoaDon.Text = "Hóa đơn";
             // 
@@ -154,7 +154,7 @@ namespace quanLyKho
             this.chkHoaDon.AutoSize = true;
             this.chkHoaDon.Location = new System.Drawing.Point(6, 247);
             this.chkHoaDon.Name = "chkHoaDon";
-            this.chkHoaDon.Size = new System.Drawing.Size(112, 23);
+            this.chkHoaDon.Size = new System.Drawing.Size(140, 26);
             this.chkHoaDon.TabIndex = 7;
             this.chkHoaDon.Text = "Theo hóa đơn";
             this.chkHoaDon.UseVisualStyleBackColor = true;
@@ -165,7 +165,7 @@ namespace quanLyKho
             this.txtTimKiemKhachHang.Enabled = false;
             this.txtTimKiemKhachHang.Location = new System.Drawing.Point(6, 211);
             this.txtTimKiemKhachHang.Name = "txtTimKiemKhachHang";
-            this.txtTimKiemKhachHang.Size = new System.Drawing.Size(196, 26);
+            this.txtTimKiemKhachHang.Size = new System.Drawing.Size(196, 30);
             this.txtTimKiemKhachHang.TabIndex = 6;
             // 
             // lblKhachHang
@@ -173,7 +173,7 @@ namespace quanLyKho
             this.lblKhachHang.AutoSize = true;
             this.lblKhachHang.Location = new System.Drawing.Point(6, 179);
             this.lblKhachHang.Name = "lblKhachHang";
-            this.lblKhachHang.Size = new System.Drawing.Size(81, 19);
+            this.lblKhachHang.Size = new System.Drawing.Size(101, 22);
             this.lblKhachHang.TabIndex = 5;
             this.lblKhachHang.Text = "Khách hàng";
             // 
@@ -182,7 +182,7 @@ namespace quanLyKho
             this.chkKhachHang.AutoSize = true;
             this.chkKhachHang.Location = new System.Drawing.Point(6, 150);
             this.chkKhachHang.Name = "chkKhachHang";
-            this.chkKhachHang.Size = new System.Drawing.Size(131, 23);
+            this.chkKhachHang.Size = new System.Drawing.Size(163, 26);
             this.chkKhachHang.TabIndex = 4;
             this.chkKhachHang.Text = "Theo khách hàng";
             this.chkKhachHang.UseVisualStyleBackColor = true;
@@ -192,7 +192,7 @@ namespace quanLyKho
             // 
             this.dtpDenNgay.Location = new System.Drawing.Point(6, 116);
             this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(200, 26);
+            this.dtpDenNgay.Size = new System.Drawing.Size(200, 30);
             this.dtpDenNgay.TabIndex = 3;
             // 
             // lblDenNgay
@@ -200,7 +200,7 @@ namespace quanLyKho
             this.lblDenNgay.AutoSize = true;
             this.lblDenNgay.Location = new System.Drawing.Point(6, 94);
             this.lblDenNgay.Name = "lblDenNgay";
-            this.lblDenNgay.Size = new System.Drawing.Size(66, 19);
+            this.lblDenNgay.Size = new System.Drawing.Size(83, 22);
             this.lblDenNgay.TabIndex = 2;
             this.lblDenNgay.Text = "Đến ngày";
             // 
@@ -208,7 +208,7 @@ namespace quanLyKho
             // 
             this.dtpTuNgay.Location = new System.Drawing.Point(6, 56);
             this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(200, 26);
+            this.dtpTuNgay.Size = new System.Drawing.Size(200, 30);
             this.dtpTuNgay.TabIndex = 1;
             // 
             // lblTuNgay
@@ -216,7 +216,7 @@ namespace quanLyKho
             this.lblTuNgay.AutoSize = true;
             this.lblTuNgay.Location = new System.Drawing.Point(6, 34);
             this.lblTuNgay.Name = "lblTuNgay";
-            this.lblTuNgay.Size = new System.Drawing.Size(59, 19);
+            this.lblTuNgay.Size = new System.Drawing.Size(74, 22);
             this.lblTuNgay.TabIndex = 0;
             this.lblTuNgay.Text = "Từ ngày";
             // 
@@ -233,12 +233,13 @@ namespace quanLyKho
             this.dgvMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMain.Location = new System.Drawing.Point(6, 6);
             this.dgvMain.Name = "dgvMain";
+            this.dgvMain.RowHeadersWidth = 51;
             this.dgvMain.Size = new System.Drawing.Size(850, 470);
             this.dgvMain.TabIndex = 3;
             // 
             // frm_BCTK_XuatHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1099, 549);

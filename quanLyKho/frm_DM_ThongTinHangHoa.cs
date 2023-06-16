@@ -150,13 +150,6 @@ namespace quanLyKho
                 }
             }
 
-            txtMaHangHoa.Text = txtMaHangHoa.Text.Trim();
-            String[] s = new string[10];
-            s[0] = txtMaHangHoa.Text.Substring(0, 1);
-            s[1] = txtMaHangHoa.Text.Substring(1, txtMaHangHoa.Text.Length - 1);
-            txtMaHangHoa.Text = s[0].ToUpper() + s[1].ToLower();
-
-
             if (txtMaHangHoa.Text.Length == 0)
             {
                 errorProvider1.SetError(txtMaHangHoa, "Chưa nhập mã hàng hóa!");

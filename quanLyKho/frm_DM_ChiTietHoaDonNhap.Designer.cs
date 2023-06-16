@@ -86,7 +86,7 @@ namespace quanLyKho
             this.lblNgayLapHD.Location = new System.Drawing.Point(317, 35);
             this.lblNgayLapHD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNgayLapHD.Name = "lblNgayLapHD";
-            this.lblNgayLapHD.Size = new System.Drawing.Size(94, 19);
+            this.lblNgayLapHD.Size = new System.Drawing.Size(116, 22);
             this.lblNgayLapHD.TabIndex = 0;
             this.lblNgayLapHD.Text = "Ngày lập HĐ";
             // 
@@ -96,7 +96,7 @@ namespace quanLyKho
             this.lblNhaCungCap.Location = new System.Drawing.Point(101, 67);
             this.lblNhaCungCap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNhaCungCap.Name = "lblNhaCungCap";
-            this.lblNhaCungCap.Size = new System.Drawing.Size(92, 19);
+            this.lblNhaCungCap.Size = new System.Drawing.Size(114, 22);
             this.lblNhaCungCap.TabIndex = 0;
             this.lblNhaCungCap.Text = "Tôn Hoa Sen";
             // 
@@ -106,7 +106,7 @@ namespace quanLyKho
             this.lblSoHoaDon.Location = new System.Drawing.Point(101, 35);
             this.lblSoHoaDon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoHoaDon.Name = "lblSoHoaDon";
-            this.lblSoHoaDon.Size = new System.Drawing.Size(82, 19);
+            this.lblSoHoaDon.Size = new System.Drawing.Size(101, 22);
             this.lblSoHoaDon.TabIndex = 0;
             this.lblSoHoaDon.Text = "HDN00001";
             // 
@@ -116,7 +116,7 @@ namespace quanLyKho
             this.lblNgayLap.Location = new System.Drawing.Point(411, 35);
             this.lblNgayLap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNgayLap.Name = "lblNgayLap";
-            this.lblNgayLap.Size = new System.Drawing.Size(67, 19);
+            this.lblNgayLap.Size = new System.Drawing.Size(84, 22);
             this.lblNgayLap.TabIndex = 0;
             this.lblNgayLap.Text = "5-1-2017";
             // 
@@ -126,7 +126,7 @@ namespace quanLyKho
             this.lblNhaCungCap1.Location = new System.Drawing.Point(4, 67);
             this.lblNhaCungCap1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNhaCungCap1.Name = "lblNhaCungCap1";
-            this.lblNhaCungCap1.Size = new System.Drawing.Size(98, 19);
+            this.lblNhaCungCap1.Size = new System.Drawing.Size(121, 22);
             this.lblNhaCungCap1.TabIndex = 0;
             this.lblNhaCungCap1.Text = "Nhà cung cấp";
             // 
@@ -155,7 +155,7 @@ namespace quanLyKho
             this.lblSoHoaDon1.Location = new System.Drawing.Point(4, 35);
             this.lblSoHoaDon1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoHoaDon1.Name = "lblSoHoaDon1";
-            this.lblSoHoaDon1.Size = new System.Drawing.Size(64, 19);
+            this.lblSoHoaDon1.Size = new System.Drawing.Size(80, 22);
             this.lblSoHoaDon1.TabIndex = 0;
             this.lblSoHoaDon1.Text = "Số phiếu";
             // 
@@ -164,7 +164,7 @@ namespace quanLyKho
             this.txtDonGia.Location = new System.Drawing.Point(413, 26);
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(2);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(161, 26);
+            this.txtDonGia.Size = new System.Drawing.Size(161, 30);
             this.txtDonGia.TabIndex = 2;
             // 
             // txtSoLuong
@@ -172,7 +172,7 @@ namespace quanLyKho
             this.txtSoLuong.Location = new System.Drawing.Point(103, 65);
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(161, 26);
+            this.txtSoLuong.Size = new System.Drawing.Size(161, 30);
             this.txtSoLuong.TabIndex = 2;
             // 
             // cboHangHoa
@@ -181,7 +181,7 @@ namespace quanLyKho
             this.cboHangHoa.Location = new System.Drawing.Point(103, 26);
             this.cboHangHoa.Margin = new System.Windows.Forms.Padding(2);
             this.cboHangHoa.Name = "cboHangHoa";
-            this.cboHangHoa.Size = new System.Drawing.Size(161, 27);
+            this.cboHangHoa.Size = new System.Drawing.Size(161, 31);
             this.cboHangHoa.TabIndex = 1;
             // 
             // lblThanhTien
@@ -190,7 +190,7 @@ namespace quanLyKho
             this.lblThanhTien.Location = new System.Drawing.Point(411, 69);
             this.lblThanhTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblThanhTien.Name = "lblThanhTien";
-            this.lblThanhTien.Size = new System.Drawing.Size(89, 19);
+            this.lblThanhTien.Size = new System.Drawing.Size(110, 23);
             this.lblThanhTien.TabIndex = 0;
             this.lblThanhTien.Text = "2040000000";
             // 
@@ -234,7 +234,7 @@ namespace quanLyKho
             this.lblThanhTien1.Location = new System.Drawing.Point(317, 69);
             this.lblThanhTien1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblThanhTien1.Name = "lblThanhTien1";
-            this.lblThanhTien1.Size = new System.Drawing.Size(80, 19);
+            this.lblThanhTien1.Size = new System.Drawing.Size(100, 23);
             this.lblThanhTien1.TabIndex = 0;
             this.lblThanhTien1.Text = "Thành tiền";
             // 
@@ -244,7 +244,7 @@ namespace quanLyKho
             this.lblDonGia.Location = new System.Drawing.Point(317, 31);
             this.lblDonGia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDonGia.Name = "lblDonGia";
-            this.lblDonGia.Size = new System.Drawing.Size(62, 19);
+            this.lblDonGia.Size = new System.Drawing.Size(75, 23);
             this.lblDonGia.TabIndex = 0;
             this.lblDonGia.Text = "Đơn giá";
             // 
@@ -254,7 +254,7 @@ namespace quanLyKho
             this.lbl_DonVi.Location = new System.Drawing.Point(101, 108);
             this.lbl_DonVi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_DonVi.Name = "lbl_DonVi";
-            this.lbl_DonVi.Size = new System.Drawing.Size(39, 19);
+            this.lbl_DonVi.Size = new System.Drawing.Size(48, 23);
             this.lbl_DonVi.TabIndex = 0;
             this.lbl_DonVi.Text = "Tấm";
             // 
@@ -264,7 +264,7 @@ namespace quanLyKho
             this.lblDonVi.Location = new System.Drawing.Point(22, 108);
             this.lblDonVi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDonVi.Name = "lblDonVi";
-            this.lblDonVi.Size = new System.Drawing.Size(54, 19);
+            this.lblDonVi.Size = new System.Drawing.Size(65, 23);
             this.lblDonVi.TabIndex = 0;
             this.lblDonVi.Text = "Đơn vị";
             // 
@@ -274,7 +274,7 @@ namespace quanLyKho
             this.lblSoLuong.Location = new System.Drawing.Point(22, 69);
             this.lblSoLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(69, 19);
+            this.lblSoLuong.Size = new System.Drawing.Size(84, 23);
             this.lblSoLuong.TabIndex = 0;
             this.lblSoLuong.Text = "Số lượng";
             // 
@@ -284,18 +284,18 @@ namespace quanLyKho
             this.lblHangHoa.Location = new System.Drawing.Point(22, 33);
             this.lblHangHoa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHangHoa.Name = "lblHangHoa";
-            this.lblHangHoa.Size = new System.Drawing.Size(73, 19);
+            this.lblHangHoa.Size = new System.Drawing.Size(90, 23);
             this.lblHangHoa.TabIndex = 0;
             this.lblHangHoa.Text = "Hàng hóa";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(223, 8);
+            this.label1.Location = new System.Drawing.Point(218, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 22);
+            this.label1.Size = new System.Drawing.Size(319, 32);
             this.label1.TabIndex = 6;
             this.label1.Text = "CHI TIẾT PHIẾU NHẬP";
             // 
@@ -401,7 +401,7 @@ namespace quanLyKho
             // 
             // frm_DM_ChiTietHoaDonNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(819, 523);

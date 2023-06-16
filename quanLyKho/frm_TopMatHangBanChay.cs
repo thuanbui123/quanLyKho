@@ -31,7 +31,7 @@ namespace quanLyKho
             chartHangBanChay.ChartAreas[0].AxisY.Title = "Tỷ lệ bán";
             DataTable data = new DataTable();
 
-            string query = "select top(3) hh.tenhanghoa, CONVERT(float, sum(ctpx.soLuongXuat)) / CONVERT(float, sum (ctpn.soLuongNhap))*100 as tyLeXuat from hanghoa as hh, chitietphieuxuat as ctpx, chiTietPhieuNhap as ctpn, kho as k, phieuxuat as px, khachhang as kh  where hh.id = k.idhanghoa and k.id = ctpx.idkho and ctpn.idHangHoa = hh.id and ctpx.idphieuxuat = px.sophieuxuat and px.idkhachhang = kh.id and  (MONTH(px.ngayLap_Xuat) = '"+month+"'  )  group by ctpx.idKho, hh.tenHangHoa order by sum(ctpx.soluongxuat) desc";
+            string query = "select top(3) hh.tenHangHoa, CONVERT(float, sum(ctpx.soLuongXuat)) / CONVERT(float, sum (ctpn.soLuongNhap))*100 as tyLeXuat from hanghoa as hh, chitietphieuxuat as ctpx, chiTietPhieuNhap as ctpn, kho as k, phieuxuat as px, khachhang as kh  where hh.id = k.idhanghoa and k.id = ctpx.idkho and ctpn.idHangHoa = hh.id and ctpx.idphieuxuat = px.sophieuxuat and px.idkhachhang = kh.id and  (MONTH(px.ngayLap_Xuat) = '"+month+"'  )  group by ctpx.idKho, hh.tenHangHoa order by sum(ctpx.soluongxuat) desc";
             data = DataProvider.Instance.executeQuery(query);
 
             chartHangBanChay.DataSource = data;
@@ -77,7 +77,7 @@ namespace quanLyKho
             chartHangBanChay.ChartAreas[0].AxisY.Title = "Tỷ lệ bán";
             DataTable data = new DataTable();
 
-            string query = "select top(3) hh.tenhanghoa, CONVERT(float, sum(ctpx.soLuongXuat)) / CONVERT(float, sum (ctpn.soLuongNhap))*100 as tyLeXuat from hanghoa as hh, chitietphieuxuat as ctpx, chiTietPhieuNhap as ctpn, kho as k, phieuxuat as px, khachhang as kh  where hh.id = k.idhanghoa and k.id = ctpx.idkho and ctpn.idHangHoa = hh.id and ctpx.idphieuxuat = px.sophieuxuat and px.idkhachhang = kh.id and  (MONTH(px.ngayLap_Xuat) >= '" + thangBatDau + "' And MONTH(px.ngayLap_Xuat) <= '"+thangKetThuc+"')  group by ctpx.idKho, hh.tenHangHoa order by sum(ctpx.soluongxuat) desc";
+            string query = "select top(3) hh.tenHangHoa, CONVERT(float, sum(ctpx.soLuongXuat)) / CONVERT(float, sum (ctpn.soLuongNhap))*100 as tyLeXuat from hanghoa as hh, chitietphieuxuat as ctpx, chiTietPhieuNhap as ctpn, kho as k, phieuxuat as px, khachhang as kh  where hh.id = k.idhanghoa and k.id = ctpx.idkho and ctpn.idHangHoa = hh.id and ctpx.idphieuxuat = px.sophieuxuat and px.idkhachhang = kh.id and  (MONTH(px.ngayLap_Xuat) >= '" + thangBatDau + "' And MONTH(px.ngayLap_Xuat) <= '"+thangKetThuc+"')  group by ctpx.idKho, hh.tenHangHoa order by sum(ctpx.soluongxuat) desc";
             data = DataProvider.Instance.executeQuery(query);
 
             chartHangBanChay.DataSource = data;
@@ -97,7 +97,7 @@ namespace quanLyKho
             chartHangBanChay.ChartAreas[0].AxisY.Title = "Tỷ lệ bán";
             DataTable data = new DataTable();
 
-            string query = "select top(3) hh.tenhanghoa, CONVERT(float, sum(ctpx.soLuongXuat)) / CONVERT(float, sum (ctpn.soLuongNhap))*100 as tyLeXuat from hanghoa as hh, chitietphieuxuat as ctpx, chiTietPhieuNhap as ctpn, kho as k, phieuxuat as px, khachhang as kh  where hh.id = k.idhanghoa and k.id = ctpx.idkho and ctpn.idHangHoa = hh.id and ctpx.idphieuxuat = px.sophieuxuat and px.idkhachhang = kh.id and  (Year(px.ngayLap_Xuat) = '" + year + "'  )  group by ctpx.idKho, hh.tenHangHoa order by sum(ctpx.soluongxuat) desc";
+            string query = "select top(3) hh.tenHangHoa, CONVERT(float, sum(ctpx.soLuongXuat)) / CONVERT(float, sum (ctpn.soLuongNhap))*100 as tyLeXuat from hanghoa as hh, chitietphieuxuat as ctpx, chiTietPhieuNhap as ctpn, kho as k, phieuxuat as px, khachhang as kh  where hh.id = k.idhanghoa and k.id = ctpx.idkho and ctpn.idHangHoa = hh.id and ctpx.idphieuxuat = px.sophieuxuat and px.idkhachhang = kh.id and  (Year(px.ngayLap_Xuat) = '" + year + "'  )  group by ctpx.idKho, hh.tenHangHoa order by sum(ctpx.soluongxuat) desc";
             data = DataProvider.Instance.executeQuery(query);
 
             chartHangBanChay.DataSource = data;
